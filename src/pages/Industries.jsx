@@ -63,14 +63,25 @@ export default function Industries() {
     <div className="py-12 bg-navy-50/20 dark:bg-navy-950/20">
       
       {/* Header */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-16">
-        <h1 className="text-xs font-bold text-gold-500 uppercase tracking-widest mb-3">Domain Focus</h1>
-        <h2 className="font-sans font-black text-4xl sm:text-5xl text-navy-900 dark:text-white mb-6">
-          Industries We Serve
-        </h2>
-        <p className="text-navy-600 dark:text-navy-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-          We engineer technical database models and custom ERP interfaces addressing the unique bottlenecks of specific industry verticals.
-        </p>
+      <section className="relative min-h-[50vh] flex items-center justify-center pt-24 pb-20 px-4 overflow-hidden mb-16">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://i.pinimg.com/736x/20/73/8c/20738cd66ff7cd69f89e236e5debe381.jpg" 
+            alt="Industries Hero" 
+            className="w-full h-full object-cover opacity-60"
+          />
+          <div className="absolute inset-0 bg-navy-950/20 bg-gradient-to-b from-navy-950/40 via-transparent to-navy-50/20 dark:to-navy-950/20" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <h1 className="text-xs font-bold text-gold-500 uppercase tracking-widest mb-3">Domain Focus</h1>
+          <h2 className="font-sans font-black text-4xl sm:text-6xl text-white mb-6">
+            Industries We Serve
+          </h2>
+          <p className="text-navy-100 text-base sm:text-xl max-w-3xl mx-auto leading-relaxed text-shadow-sm">
+            We engineer technical database models and custom ERP interfaces addressing the unique bottlenecks of specific industry verticals.
+          </p>
+        </div>
       </section>
 
       {/* Industries Grid */}

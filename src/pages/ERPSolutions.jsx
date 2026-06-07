@@ -48,14 +48,25 @@ export default function ERPSolutions() {
     <div className="py-12 bg-navy-50/30 dark:bg-navy-950/20">
       
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-16">
-        <h1 className="text-xs font-bold text-gold-500 uppercase tracking-widest mb-3">Enterprise Suite</h1>
-        <h2 className="font-sans font-black text-4xl sm:text-5xl text-navy-900 dark:text-white mb-6">
-          Smart ERP Solutions for Modern Businesses
-        </h2>
-        <p className="text-navy-600 dark:text-navy-300 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
-          Scale your enterprise operations with vertical-specific software modules. Our systems are built around your actual industry workflows, ensuring maximum user adoption and minimal setup friction.
-        </p>
+      <section className="relative min-h-[50vh] flex items-center justify-center pt-24 pb-20 px-4 overflow-hidden mb-16">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://i.pinimg.com/1200x/44/88/e7/4488e7eb248bab4a4cef19eb71f17da0.jpg" 
+            alt="ERP Solutions Bg" 
+            className="w-full h-full object-cover opacity-60"
+          />
+          <div className="absolute inset-0 bg-navy-950/20 bg-gradient-to-b from-navy-950/40 via-transparent to-navy-50/30 dark:to-navy-950/20" />
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <h1 className="text-xs font-bold text-gold-500 uppercase tracking-widest mb-3">Enterprise Suite</h1>
+          <h2 className="font-sans font-black text-4xl sm:text-6xl text-white mb-6">
+            Smart ERP Solutions
+          </h2>
+          <p className="text-navy-100 text-base sm:text-xl max-w-3xl mx-auto leading-relaxed">
+            Scale your enterprise operations with vertical-specific software modules. Our systems are built around your actual industry workflows.
+          </p>
+        </div>
       </section>
 
       {/* Categories Grid */}

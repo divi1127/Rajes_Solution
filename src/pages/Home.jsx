@@ -74,12 +74,21 @@ export default function Home() {
     <div className="relative">
       
       {/* 1. HERO SECTION */}
-      <section className="relative min-h-[90vh] flex items-center justify-center py-20 px-4 md:px-8 bg-gradient-to-b from-transparent to-navy-50/50 dark:to-navy-950/20">
+      <section className="relative min-h-screen flex items-center justify-center pt-24 pb-20 px-4 md:px-8 overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://i.pinimg.com/736x/cd/32/4a/cd324ac33b3f38cf00bf5fd40362226d.jpg" 
+            alt="Hero Background" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-navy-950/40 backdrop-blur-[1px] bg-gradient-to-b from-navy-950/60 via-transparent to-navy-950" />
+        </div>
         
         {/* Animated Particles background simulation */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 left-10 w-72 h-72 rounded-full bg-gold-500/5 dark:bg-gold-500/10 blur-[120px] animate-pulse-slow" />
-          <div className="absolute bottom-1/4 right-10 w-96 h-96 rounded-full bg-blue-500/5 dark:bg-navy-800/25 blur-[120px] animate-pulse-slow" style={{ animationDelay: '2s' }} />
+          <div className="absolute top-1/4 left-10 w-72 h-72 rounded-full bg-gold-500/10 blur-[120px] animate-pulse-slow" />
+          <div className="absolute bottom-1/4 right-10 w-96 h-96 rounded-full bg-blue-500/10 blur-[120px] animate-pulse-slow" style={{ animationDelay: '2s' }} />
         </div>
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
@@ -91,12 +100,12 @@ export default function Home() {
               Trusted Enterprise IT Partner
             </div>
             
-            <h1 className="font-sans font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-navy-900 dark:text-white leading-[1.1] mb-6">
+            <h1 className="font-sans font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-white leading-[1.1] mb-6">
               Enterprise ERP Solutions <br />
               <span className="text-gradient-gold font-black">&amp; 24/7 Remote DBA</span>
             </h1>
 
-            <p className="text-navy-600 dark:text-navy-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8">
+            <p className="text-navy-100 dark:text-navy-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8">
               Unlock scaling limits with tailored ERP software modules and premium database optimization. We maintain and secure database engines (SQL Server, SAP HANA) while optimizing billing and inventory pipelines.
             </p>
 
