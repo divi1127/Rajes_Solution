@@ -44,7 +44,7 @@ export default function ContactUs() {
     <div className="py-12 bg-navy-50/20 dark:bg-navy-950/20">
       
       {/* Header */}
-      <section className="relative min-h-[50vh] flex items-center justify-center pt-24 pb-20 px-4 overflow-hidden mb-16">
+      <section className="relative min-h-screen flex items-center justify-center pt-24 pb-20 px-4 overflow-hidden mb-16">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://i.pinimg.com/1200x/23/ea/18/23ea18929615d6d6f06b08a09eb9f471.jpg" 

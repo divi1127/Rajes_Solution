@@ -20,7 +20,7 @@ export default function AboutUs() {
     <div className="py-12 bg-navy-50/20 dark:bg-navy-950/20">
       
       {/* Intro Hero */}
-      <section className="relative min-h-[60vh] flex items-center justify-center pt-24 pb-20 px-4 overflow-hidden mb-16">
+      <section className="relative min-h-screen flex items-center justify-center pt-24 pb-20 px-4 overflow-hidden mb-16">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://i.pinimg.com/1200x/62/1c/db/621cdb56e2d5d80107ad95ca23fa79fa.jpg" 

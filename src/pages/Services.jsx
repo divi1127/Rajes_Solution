@@ -114,7 +114,7 @@ export default function Services() {
     <div className="bg-white dark:bg-navy-950 min-h-screen text-navy-900 dark:text-white transition-colors">
       
       {/* Hero Section with Background Image */}
-      <section className="relative min-h-[60vh] flex items-center justify-center pt-32 pb-20 px-4 overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-4 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://i.pinimg.com/1200x/64/85/9f/64859fdf25295a476096c3e8d5b91d3f.jpg" 

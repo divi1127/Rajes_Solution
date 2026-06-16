@@ -48,7 +48,7 @@ export default function ERPSolutions() {
     <div className="py-12 bg-navy-50/30 dark:bg-navy-950/20">
       
       {/* Hero Section */}
-      <section className="relative min-h-[50vh] flex items-center justify-center pt-24 pb-20 px-4 overflow-hidden mb-16">
+      <section className="relative min-h-screen flex items-center justify-center pt-24 pb-20 px-4 overflow-hidden mb-16">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://i.pinimg.com/1200x/44/88/e7/4488e7eb248bab4a4cef19eb71f17da0.jpg" 
