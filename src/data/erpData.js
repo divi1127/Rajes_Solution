@@ -498,5 +498,67 @@ export const erpProducts = [
         answer: "Yes, each fabric roll is assigned a unique roll number and barcode label representing weight, length, design, and shift details."
       }
     ]
+  },
+  {
+    slug: "hotel-erp",
+    name: "Hotel ERP",
+    tagline: "Manage reservations, front desk, and guest services seamlessly.",
+    shortDesc: "Complete hospitality management software for hotels, resorts, and restaurants.",
+    longDesc: "Rajes Solutions Hotel ERP is a comprehensive hospitality management system designed to streamline front desk operations, room reservations, guest billing, and restaurant services. From booking to checkout, manage the entire guest journey with ease. Optimize room occupancy, manage housekeeping schedules, and integrate with online travel agents (OTAs) for real-time availability updates.",
+    icon: "Bed",
+    themeColor: "from-amber-600 to-orange-500",
+    seo: {
+      title: "Hotel Management ERP Software | Rajes Solutions",
+      description: "Manage hotel rooms, reservations, guest billing, and restaurant POS with our integrated Hotel ERP system.",
+      keywords: "hotel ERP, hotel management software, room booking, guest management, hospitality software"
+    },
+    features: [
+      {
+        title: "Front Desk & Reservations",
+        description: "Handle walk-ins, online bookings, and room allocations with a live status dashboard.",
+        icon: "Key"
+      },
+      {
+        title: "Guest Billing & POS",
+        description: "Manage room service bills, restaurant orders, and facility charges in a single guest folio.",
+        icon: "CreditCard"
+      },
+      {
+        title: "Housekeeping Management",
+        description: "Track room cleaning status, maintain staff schedules, and manage laundry requests.",
+        icon: "Wrench"
+      },
+      {
+        title: "Restaurant & Kitchen (KOT)",
+        description: "Integrated restaurant POS with KOT printing and inventory tracking for F&B items.",
+        icon: "Coffee"
+      },
+      {
+        title: "OTA Integration",
+        description: "Automatic sync with online travel agents like Booking.com, Agoda, and Expedia.",
+        icon: "Globe"
+      },
+      {
+        title: "Inventory & Procurement",
+        description: "Manage hotel assets, linen, toiletries, and food supplies with automated reordering.",
+        icon: "Package"
+      }
+    ],
+    benefits: [
+      "Increase room occupancy with real-time OTA synchronization.",
+      "Reduce guest checkout time by automating all billing across departments.",
+      "Lower operational costs with efficient housekeeping and inventory management.",
+      "Enhance guest experience with personalized services and quick response."
+    ],
+    faqs: [
+      {
+        question: "Does it support multiple restaurant outlets within the hotel?",
+        answer: "Yes, you can manage multiple F&B outlets, bars, and cafes with a centralized accounting and inventory system."
+      },
+      {
+        question: "Can we manage guest history and loyalty points?",
+        answer: "Absolutely. The system maintains guest profiles, preferences, and visit history to support loyalty programs."
+      }
+    ]
   }
 ];

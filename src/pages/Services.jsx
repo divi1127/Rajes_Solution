@@ -2,126 +2,111 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Cpu, Database, Code, CheckCircle2, ArrowRight, 
-  Brain, Layout, BarChart, Server, Globe, Zap, Smartphone, Cloud
+  Brain, Layout, BarChart, Server, Globe, Zap, Smartphone, Cloud, Wrench, RefreshCw, Settings
 } from 'lucide-react';
 import { motion } from 'framer-motion';
-
-// Import images
-import frontendImg from '../assets/services/frontend.png';
-import backendImg from '../assets/services/backend.png';
-import databaseImg from '../assets/services/database.png';
-import aiImg from '../assets/services/ai.png';
-import mobileImg from '../assets/services/mobile.png';
-import cloudImg from '../assets/services/cloud.png';
 
 export default function Services() {
   useEffect(() => {
     document.title = "Our Services | Enterprise Technology Solutions | Rajes Solutions";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute("content", "Comprehensive enterprise services including Mobile Apps, Cloud Infrastructure, Frontend, Backend, Database Management, and AI Support.");
-    }
+    window.scrollTo(0, 0);
   }, []);
 
   const services = [
     {
-      id: "mobile",
-      title: "Mobile App Development",
-      icon: Smartphone,
-      image: mobileImg,
-      description: "Building cross-platform, enterprise-grade mobile applications with seamless user experiences.",
+      id: "erp-dev",
+      title: "Enterprise ERP Development",
+      icon: Layout,
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
+      description: "We design and develop scalable ERP systems that streamline business operations, improve decision-making, and integrate all core business functions into a unified platform.",
       features: [
-        "iOS & Android Development",
-        "React Native & Flutter",
-        "Mobile ERP Integration",
-        "Offline-First Architecture"
-      ],
-      color: "from-rose-500 to-pink-500"
-    },
-    {
-      id: "cloud",
-      title: "Cloud Infrastructure",
-      icon: Cloud,
-      image: cloudImg,
-      description: "Scaling your business with secure, high-availability cloud environments and DevOps automation.",
-      features: [
-        "AWS/Azure/GCP Setup",
-        "Kubernetes & Docker",
-        "CI/CD Pipelines",
-        "Cloud Security Audits"
+        "ERP system design and architecture",
+        "Custom module development",
+        "Workflow automation",
+        "Role-based dashboards",
+        "API & third-party integrations",
+        "Multi-branch/location systems"
       ],
       color: "from-blue-600 to-indigo-500"
     },
     {
-      id: "frontend",
-      title: "Frontend Development",
-      icon: Layout,
-      image: frontendImg,
-      description: "Crafting immersive, high-performance user interfaces using modern frameworks like React and Next.js.",
-      features: [
-        "Responsive & Adaptive UI/UX",
-        "Single Page Applications (SPA)",
-        "Performance Optimization",
-        "Progressive Web Apps (PWA)"
-      ],
-      color: "from-blue-400 to-cyan-400"
-    },
-    {
-      id: "backend",
-      title: "Backend Development",
+      id: "custom-software",
+      title: "Custom Software Development",
       icon: Code,
-      image: backendImg,
-      description: "Building scalable, secure, and robust server-side architectures to power your complex business logic.",
+      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop",
+      description: "We build enterprise-grade software solutions tailored to specific business requirements and industry challenges.",
       features: [
-        "RESTful & GraphQL APIs",
-        "Microservices Architecture",
-        "Cloud-Native Solutions",
-        "Serverless Computing"
+        "Web application development",
+        "Enterprise portal development",
+        "Backend API development",
+        "Legacy system modernization",
+        "SaaS application development",
+        "Workflow-based business apps"
       ],
-      color: "from-purple-500 to-indigo-400"
+      color: "from-purple-600 to-indigo-500"
     },
     {
-      id: "database",
-      title: "Database Management",
-      icon: Database,
-      image: databaseImg,
-      description: "Expert design, optimization, and management of high-traffic database systems for maximum reliability.",
+      id: "cloud-devops",
+      title: "Cloud & DevOps Services",
+      icon: Cloud,
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop",
+      description: "We help enterprises modernize infrastructure using cloud technologies and DevOps automation practices.",
       features: [
-        "SQL & NoSQL Specialization",
-        "Performance Tuning & Indexing",
-        "High Availability Clusters",
-        "Data Migration & Integration"
+        "Azure / AWS / Hybrid cloud solutions",
+        "Cloud architecture design",
+        "CI/CD pipeline implementation",
+        "Infrastructure as Code (IaC)",
+        "Monitoring and alerting",
+        "Cost optimization"
       ],
-      color: "from-amber-500 to-orange-400"
+      color: "from-cyan-500 to-blue-500"
     },
     {
-      id: "ai",
-      title: "AI Support & Integration",
-      icon: Brain,
-      image: aiImg,
-      description: "Infusing intelligence into your applications with state-of-the-art AI and machine learning models.",
+      id: "app-support",
+      title: "Application Support & Maintenance",
+      icon: Wrench,
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop",
+      description: "We provide continuous support for enterprise applications to ensure smooth operations and minimal downtime.",
       features: [
-        "LLM Integration (GPT, Claude)",
-        "Predictive Analytics",
-        "Process Automation",
-        "NLP & Computer Vision"
+        "24×7 production support",
+        "Bug fixing and enhancements",
+        "System health monitoring",
+        "Performance tuning",
+        "SLA-based support models",
+        "Incident management & RCA"
       ],
-      color: "from-emerald-500 to-teal-400"
+      color: "from-amber-500 to-orange-500"
+    },
+    {
+      id: "data-migration",
+      title: "Data Migration Services",
+      icon: RefreshCw,
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=2026&auto=format&fit=crop",
+      description: "We ensure secure, accurate, and seamless migration of enterprise data across platforms and environments.",
+      features: [
+        "Database migration (SQL, Sybase, Postgres)",
+        "Cloud database migration",
+        "Version & platform upgrades",
+        "Data validation & reconciliation",
+        "Zero data loss strategies",
+        "Downtime minimization"
+      ],
+      color: "from-emerald-500 to-teal-500"
     }
   ];
 
   return (
     <div className="bg-white dark:bg-navy-950 min-h-screen text-navy-900 dark:text-white transition-colors">
       
-      {/* Hero Section with Background Image */}
-      <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-4 overflow-hidden">
+      {/* Hero Section */}
+      <section className="relative h-screen flex items-center justify-center px-4 overflow-hidden bg-navy-900">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://i.pinimg.com/1200x/64/85/9f/64859fdf25295a476096c3e8d5b91d3f.jpg" 
+            src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop" 
             alt="Services Hero" 
-            className="w-full h-full object-cover opacity-60"
+            className="w-full h-full object-cover opacity-30"
           />
-          <div className="absolute inset-0 bg-navy-950/30 bg-gradient-to-b from-navy-950/50 via-transparent to-white dark:to-navy-950" />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy-950/50 via-navy-950/80 to-navy-950" />
         </div>
         
         <motion.div
@@ -131,18 +116,18 @@ export default function Services() {
           className="max-w-4xl mx-auto text-center relative z-10"
         >
           <span className="inline-block px-4 py-1 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-500 text-xs font-bold tracking-widest uppercase mb-6">
-            Elite Engineering
+            Enterprise Solutions
           </span>
           <h1 className="font-sans font-black text-5xl sm:text-7xl mb-8 leading-tight text-white">
-            Our <span className="text-gradient-gold">Services</span> Portfolio
+            Our <span className="text-gradient-gold">Capabilities</span>
           </h1>
-          <p className="text-navy-100 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed opacity-90">
-            From mobile ecosystems to distributed cloud architectures, we deliver high-impact technology solutions designed for enterprise scale.
+          <p className="text-navy-100 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
+            From ERP development to elite database administration, we provide the technical foundation for modern enterprise growth.
           </p>
         </motion.div>
       </section>
 
-      {/* Unique UI: Staggered Services Display */}
+      {/* Services List */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="space-y-32">
           {services.map((service, index) => (
@@ -154,48 +139,40 @@ export default function Services() {
               transition={{ duration: 0.7 }}
               className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12 lg:gap-20`}
             >
-              {/* Image Side */}
               <div className="w-full lg:w-1/2 relative group">
                 <div className={`absolute -inset-4 bg-gradient-to-br ${service.color} opacity-10 blur-2xl rounded-3xl group-hover:opacity-20 transition-opacity`} />
                 <div className="relative rounded-3xl overflow-hidden border border-navy-100 dark:border-white/10 shadow-2xl bg-navy-900">
-                  <div className="absolute inset-0 bg-navy-950/10 group-hover:bg-transparent transition-colors z-10" />
                   <img 
                     src={service.image} 
                     alt={service.title} 
                     className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
-                {/* Floating Icon */}
-                <div className={`absolute -bottom-6 ${index % 2 === 0 ? '-right-6' : '-left-6'} w-20 h-20 rounded-2xl bg-navy-900 border border-white/10 flex items-center justify-center p-5 shadow-2xl z-20`}>
-                  <service.icon className={`w-full h-full text-gradient-gold`} />
+                <div className={`absolute -bottom-6 ${index % 2 === 0 ? '-right-6' : '-left-6'} w-20 h-20 rounded-2xl bg-white dark:bg-navy-900 border border-navy-100 dark:border-navy-800 flex items-center justify-center p-5 shadow-2xl z-20`}>
+                  <service.icon className="w-full h-full text-gold-500" />
                 </div>
               </div>
 
-              {/* Content Side */}
               <div className="w-full lg:w-1/2">
-                <h3 className="text-3xl sm:text-4xl font-bold mb-6 flex items-center gap-4 text-navy-900 dark:text-white">
-                  <span className="text-gold-500 text-5xl opacity-10 dark:opacity-20 font-black">0{index + 1}</span>
+                <h3 className="text-3xl sm:text-4xl font-black mb-6 text-navy-900 dark:text-white">
                   {service.title}
                 </h3>
-                <p className="text-navy-600 dark:text-navy-200 text-lg leading-relaxed mb-8">
+                <p className="text-navy-600 dark:text-navy-300 text-lg leading-relaxed mb-8">
                   {service.description}
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
                   {service.features.map((feature, i) => (
-                    <div key={i} className="flex items-center gap-3 text-navy-700 dark:text-navy-100 group">
-                      <div className="w-8 h-8 rounded-lg bg-navy-50 dark:bg-navy-900 border border-navy-100 dark:border-navy-800 flex items-center justify-center shrink-0 group-hover:border-gold-500/50 transition-colors">
-                        <CheckCircle2 className="w-4 h-4 text-gold-500" />
-                      </div>
-                      <span className="text-sm font-medium">{feature}</span>
+                    <div key={i} className="flex items-center gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-gold-500 flex-shrink-0" />
+                      <span className="text-sm font-bold text-navy-800 dark:text-navy-100">{feature}</span>
                     </div>
                   ))}
                 </div>
                 <Link
                   to="/contact-us"
-                  className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 text-navy-950 font-bold hover:shadow-lg hover:shadow-gold-500/20 transition-all active:scale-95"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-navy-900 dark:bg-navy-800 hover:bg-gold-500 dark:hover:bg-gold-500 hover:text-navy-950 text-white font-bold transition-all"
                 >
-                  Request Enquiry
-                  <ArrowRight className="w-5 h-5" />
+                  Request Consultation <ArrowRight className="w-5 h-5" />
                 </Link>
               </div>
             </motion.div>
@@ -203,32 +180,80 @@ export default function Services() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-32 px-4">
-        <div className="max-w-5xl mx-auto">
-          <div className="relative p-12 sm:p-20 rounded-[3rem] overflow-hidden group">
-            <div className="absolute inset-0 bg-navy-900 border border-white/5" />
-            <div className="absolute -top-24 -right-24 w-96 h-96 bg-gold-500/10 rounded-full blur-[100px]" />
-            
-            <div className="relative z-10 text-center">
-              <h3 className="text-4xl sm:text-5xl font-black mb-8 text-white">
-                Build the Future with <br className="hidden sm:block" /> Rajes Solutions
-              </h3>
-              <p className="text-navy-100 text-lg mb-12 max-w-2xl mx-auto">
-                Our team is ready to architect your next high-performance system. Contact our advisory lead for a discovery session.
+      {/* Engineering Strength */}
+      <section className="py-24 bg-navy-950 text-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <h2 className="text-xs font-bold text-gold-500 uppercase tracking-widest mb-3">Technical Prowess</h2>
+            <h3 className="text-3xl sm:text-5xl font-black mb-6">Enterprise Engineering Strength</h3>
+            <p className="text-navy-300 text-lg">Our services are backed by deep expertise in large-scale production environments.</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              "High Availability Systems (Always-On, Clustering)",
+              "Large-scale production database management",
+              "Performance tuning for high-load systems",
+              "Advanced Automation & Expert Scripting",
+              "Cross-platform infrastructure expertise",
+              "Disaster Recovery & Risk Management"
+            ].map((strength, i) => (
+              <div key={i} className="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-gold-500/50 transition-all">
+                <Settings className="w-10 h-10 text-gold-500 mb-6" />
+                <h4 className="text-xl font-bold text-white mb-2">{strength}</h4>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Business Outcomes */}
+      <section className="py-24 bg-navy-50 dark:bg-navy-900/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="glass-card bg-white dark:bg-navy-900 p-12 sm:p-20 rounded-[3rem] border-navy-100 dark:border-navy-800 flex flex-col lg:flex-row items-center gap-16">
+            <div className="lg:w-1/2">
+              <h3 className="text-3xl sm:text-4xl font-black text-navy-900 dark:text-white mb-8">Business Outcomes</h3>
+              <p className="text-navy-600 dark:text-navy-300 text-lg mb-8 leading-relaxed">
+                We deliver measurable results that impact your bottom line and operational efficiency.
               </p>
-              <Link
-                to="/contact-us"
-                className="inline-flex items-center gap-3 px-10 py-5 rounded-2xl bg-gradient-to-r from-gold-500 to-gold-600 text-navy-950 font-black text-lg hover:from-gold-400 hover:to-gold-500 transition-all shadow-2xl"
-              >
-                Start Your Project
-                <ArrowRight className="w-6 h-6" />
-              </Link>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {[
+                  "Up to 99.9% system uptime",
+                  "40% Increase in operational speed",
+                  "Zero data loss migration",
+                  "24/7 Security & Monitoring",
+                  "Scalable Cloud architecture",
+                  "Optimized Licensing Costs"
+                ].map((outcome, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-gold-500" />
+                    <span className="font-bold text-navy-800 dark:text-navy-100">{outcome}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="lg:w-1/2 relative">
+              <div className="absolute inset-0 bg-gold-400/20 blur-[80px] rounded-full" />
+              <div className="relative p-10 bg-navy-900 rounded-3xl border border-navy-800 text-center">
+                <div className="text-5xl font-black text-gold-500 mb-2">99.9%</div>
+                <div className="text-navy-400 uppercase tracking-widest font-bold text-sm">System Reliability</div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* CTA */}
+      <section className="py-24 text-center">
+        <h3 className="text-3xl sm:text-4xl font-black text-navy-900 dark:text-white mb-8">Ready to Scale Your Infrastructure?</h3>
+        <Link
+          to="/contact-us"
+          className="inline-flex items-center gap-3 px-10 py-5 rounded-2xl bg-gradient-to-r from-gold-500 to-gold-600 text-navy-950 font-black text-lg transition-all shadow-xl hover:shadow-gold-500/20"
+        >
+          Get Started Today
+          <ArrowRight className="w-6 h-6" />
+        </Link>
+      </section>
     </div>
   );
 }

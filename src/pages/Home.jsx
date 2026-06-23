@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Database, ShieldCheck, Cpu, ArrowRight, CheckCircle2, Star, 
-  Settings, Users, Wrench, GraduationCap, Briefcase, Sun, HeartPulse, ShoppingCart 
+  Settings, Users, Wrench, GraduationCap, Briefcase, Sun, HeartPulse, ShoppingCart,
+  Cloud, RefreshCw, Activity, Zap, Check, Rocket, Server, Layout, Code
 } from 'lucide-react';
 import AnimatedCounter from '../components/AnimatedCounter';
 import RequestModal from '../components/RequestModal';
 import { erpProducts } from '../data/erpData';
 import { dbaServices } from '../data/dbaData';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   const [modalState, setModalState] = useState({ isOpen: false, type: 'demo' });
@@ -74,15 +76,16 @@ export default function Home() {
     <div className="relative">
       
       {/* 1. HERO SECTION */}
-      <section className="relative min-h-screen flex items-center justify-center pt-24 pb-20 px-4 md:px-8 overflow-hidden">
+      <section className="relative h-screen flex items-center justify-center pt-32 pb-20 px-4 md:px-8 overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://i.pinimg.com/736x/cd/32/4a/cd324ac33b3f38cf00bf5fd40362226d.jpg" 
-            alt="Hero Background" 
+            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=2070&auto=format&fit=crop" 
+            alt="Enterprise Data Center" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-navy-950/40 backdrop-blur-[1px] bg-gradient-to-b from-navy-950/60 via-transparent to-navy-950" />
+          {/* Reduced white overlay in light mode, deep navy in dark mode */}
+          <div className="absolute inset-0 bg-white/10 dark:bg-navy-950/40 backdrop-blur-[1px] bg-gradient-to-b from-white/20 dark:from-navy-950/60 via-transparent to-navy-50 dark:to-navy-950" />
         </div>
         
         {/* Animated Particles background simulation */}
@@ -100,13 +103,18 @@ export default function Home() {
               Trusted Enterprise IT Partner
             </div>
             
-            <h1 className="font-sans font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-white leading-[1.1] mb-6">
+            <h1 className="font-sans font-extrabold text-4xl sm:text-5xl lg:text-7xl tracking-tight text-navy-900 dark:text-white leading-[1.1] mb-6">
               Enterprise ERP Solutions <br />
-              <span className="text-gradient-gold font-black">&amp; 24/7 Remote DBA</span>
+              <span className="text-gradient-gold font-black">& 24×7 Remote DBA</span>
             </h1>
 
-            <p className="text-navy-100 dark:text-navy-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8">
-              Unlock scaling limits with tailored ERP software modules and premium database optimization. We maintain and secure database engines (SQL Server, SAP HANA) while optimizing billing and inventory pipelines.
+            <p className="text-navy-700 dark:text-navy-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8">
+              Rajes Solutions delivers enterprise ERP systems, custom software solutions, and expert database administration services that help organizations automate operations, improve performance, and ensure high availability across cloud and on-premise environments.
+            </p>
+
+            <p className="text-gold-600 dark:text-gold-400 font-bold mb-8 flex items-center justify-center lg:justify-start gap-2">
+              <ShieldCheck className="w-5 h-5" />
+              Mission-critical systems where performance, uptime, and data security are essential.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
@@ -215,22 +223,91 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. STATS HIGHLIGHTS */}
-      <section className="py-20 bg-white dark:bg-navy-950 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center p-6 glass-card border-none hover:shadow-xl transition-all">
-                <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-navy-900 dark:text-white mb-2 font-sans">
-                  <span className="text-gold-500">
-                    <AnimatedCounter target={stat.target} suffix={stat.suffix} />
-                  </span>
+      {/* 2. WHAT WE DELIVER */}
+      <section className="py-24 bg-white dark:bg-navy-950 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-xs font-bold text-gold-500 uppercase tracking-widest mb-3">Enterprise Capabilities</h2>
+            <h3 className="font-sans font-black text-3xl sm:text-5xl text-navy-900 dark:text-white mb-6">
+              What We Deliver
+            </h3>
+            <p className="text-navy-600 dark:text-navy-300 text-lg">
+              We help enterprises build and manage scalable digital systems that connect business processes, data, and users into a unified platform.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { icon: Layout, title: "Enterprise ERP Development", desc: "Custom modular systems for business automation." },
+              { icon: Database, title: "Remote DBA Services", desc: "Expert SQL Server, Sybase, & PostgreSQL administration." },
+              { icon: Cloud, title: "Cloud Migration & Managed Services", desc: "Azure, AWS, and Hybrid infrastructure management." },
+              { icon: Zap, title: "Performance Optimization & Tuning", desc: "Accelerating slow systems and high-load databases." },
+              { icon: Code, title: "Application Development & Integration", desc: "Seamless system connectivity and API architecture." },
+              { icon: RefreshCw, title: "Database Modernization & Upgrades", desc: "Upgrading legacy systems to modern cloud versions." },
+              { icon: Activity, title: "Enterprise Monitoring & Support", desc: "24×7 proactive health checks and incident response." },
+              { icon: ShieldCheck, title: "Security & Compliance", desc: "Enterprise-grade data protection and hardening." }
+            ].map((item, i) => (
+              <div key={i} className="p-8 rounded-2xl bg-navy-50 dark:bg-navy-900/40 border border-navy-100 dark:border-navy-800/50 hover:border-gold-500/50 transition-all group">
+                <div className="w-12 h-12 rounded-xl bg-white dark:bg-navy-800 text-gold-500 flex items-center justify-center mb-6 shadow-sm group-hover:bg-gold-500 group-hover:text-navy-950 transition-all">
+                  <item.icon className="w-6 h-6" />
                 </div>
-                <div className="text-xs sm:text-sm font-semibold text-navy-500 dark:text-navy-400 uppercase tracking-wider">
-                  {stat.label}
-                </div>
+                <h4 className="text-lg font-bold text-navy-900 dark:text-white mb-3 group-hover:text-gold-500 transition-colors">{item.title}</h4>
+                <p className="text-sm text-navy-600 dark:text-navy-400 leading-relaxed">{item.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 3. VALUE PROPOSITION */}
+      <section className="py-24 bg-navy-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-xs font-bold text-gold-500 uppercase tracking-widest mb-4">Our Commitment</h2>
+              <h3 className="text-3xl sm:text-5xl font-black mb-8 leading-tight">
+                We don’t just build systems — <br />
+                <span className="text-gold-400">we ensure they run fast, secure, and always available.</span>
+              </h3>
+              <div className="space-y-6">
+                {[
+                  "Reduce downtime and improve system stability",
+                  "Optimize database and application performance",
+                  "Automate business operations",
+                  "Enable scalable cloud-ready architecture",
+                  "Support enterprise systems 24×7"
+                ].map((point, i) => (
+                  <div key={i} className="flex items-center gap-4 group">
+                    <div className="w-8 h-8 rounded-full bg-gold-500/10 border border-gold-500/20 flex items-center justify-center text-gold-500 group-hover:bg-gold-500 group-hover:text-navy-950 transition-all">
+                      <CheckCircle2 className="w-5 h-5" />
+                    </div>
+                    <span className="text-lg font-medium text-navy-100">{point}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="relative">
+              <div className="absolute inset-0 bg-gold-500/20 blur-[100px] rounded-full" />
+              <div className="relative glass-card border-white/10 bg-white/5 p-10 rounded-3xl">
+                <div className="text-4xl font-black text-gold-500 mb-2">99.9%</div>
+                <div className="text-navy-200 uppercase tracking-widest text-sm font-bold mb-8">System Availability Guaranteed</div>
+                <div className="space-y-4">
+                  <div className="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+                    <motion.div 
+                      initial={{ width: 0 }}
+                      whileInView={{ width: '99.9%' }}
+                      transition={{ duration: 1.5 }}
+                      className="h-full bg-gradient-to-r from-gold-500 to-gold-300" 
+                    />
+                  </div>
+                  <div className="flex justify-between text-xs font-mono text-navy-400">
+                    <span>Performance: Peak</span>
+                    <span>Monitoring: Active</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -363,46 +440,144 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 6. INDUSTRIES SERVED */}
-      <section className="py-20 bg-navy-50/50 dark:bg-navy-900/20 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-xs font-bold text-gold-500 uppercase tracking-widest mb-3">Target Sectors</h2>
-            <h3 className="font-sans font-black text-3xl sm:text-4xl text-navy-900 dark:text-white">
-              Industries Served
-            </h3>
-            <p className="text-navy-600 dark:text-navy-300 mt-4 text-sm sm:text-base leading-relaxed">
-              We specialize in engineering technical infrastructure for challenging domains.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-            {[
-              { name: 'Manufacturing', icon: Settings, link: '/erp/manufacturing-erp' },
-              { name: 'Automobile', icon: Wrench, link: '/erp/workshop-erp' },
-              { name: 'Retail & Grocery', icon: ShoppingCart, link: '/erp/supermarket-erp' },
-              { name: 'Education', icon: GraduationCap, link: '/erp/school-erp' },
-              { name: 'Healthcare', icon: HeartPulse, link: '/erp/hospital-erp' }
-            ].map((ind, i) => {
-              const IconComp = ind.icon;
-              return (
-                <Link
-                  key={i}
-                  to={ind.link}
-                  className="glass-card border border-navy-100/40 dark:border-navy-800/40 p-6 flex flex-col items-center text-center hover:border-gold-500/50 hover:shadow-lg transition-all group"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-navy-100 dark:bg-navy-900 text-navy-700 dark:text-navy-200 group-hover:bg-gold-500 group-hover:text-navy-950 flex items-center justify-center mb-4 transition-all duration-300">
-                    <IconComp className="w-6 h-6" />
+      {/* 6. WHY CHOOSE US & KEY STRENGTHS */}
+      <section className="py-24 bg-navy-50/50 dark:bg-navy-900/10 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+            {/* Why Choose Us */}
+            <div>
+              <h2 className="text-xs font-bold text-gold-500 uppercase tracking-widest mb-4">Market Leadership</h2>
+              <h3 className="text-3xl font-black text-navy-900 dark:text-white mb-8">Why Choose Us</h3>
+              <div className="grid grid-cols-1 gap-4">
+                {[
+                  "26+ years of enterprise IT experience",
+                  "Strong expertise in SQL Server, Sybase & PostgreSQL",
+                  "24×7 production support capability",
+                  "Proven performance tuning and optimization skills",
+                  "Cloud & hybrid infrastructure experience",
+                  "Enterprise-grade security and reliability",
+                  "Hands-on experience in mission-critical production environments"
+                ].map((reason, i) => (
+                  <div key={i} className="flex items-start gap-3 p-4 rounded-xl bg-white dark:bg-navy-900 shadow-sm border border-navy-100 dark:border-navy-800">
+                    <Check className="w-5 h-5 text-gold-500 mt-0.5 flex-shrink-0" />
+                    <span className="text-navy-700 dark:text-navy-300 font-medium">{reason}</span>
                   </div>
-                  <h4 className="font-bold text-sm text-navy-800 dark:text-white font-sans">
-                    {ind.name}
-                  </h4>
-                </Link>
-              );
-            })}
-          </div>
+                ))}
+              </div>
+            </div>
 
+            {/* Key Strengths */}
+            <div>
+              <h2 className="text-xs font-bold text-gold-500 uppercase tracking-widest mb-4">Engineering Core</h2>
+              <h3 className="text-3xl font-black text-navy-900 dark:text-white mb-8">Key Strengths</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {[
+                  { title: "High Availability", desc: "Always-On, Clustering, Replication" },
+                  { title: "Disaster Recovery", desc: "Robust Backup Strategies" },
+                  { title: "Automation", desc: "PowerShell & Expert Scripting" },
+                  { title: "Monitoring", desc: "Enterprise Incident Management" },
+                  { title: "Cross-Platform", desc: "Multi-database expertise" },
+                  { title: "Performance", desc: "Troubleshooting under load" }
+                ].map((strength, i) => (
+                  <div key={i} className="p-5 rounded-2xl bg-gradient-to-br from-white to-navy-50 dark:from-navy-900 dark:to-navy-950 border border-navy-100 dark:border-navy-800 hover:border-gold-500/50 transition-all">
+                    <h4 className="font-bold text-navy-900 dark:text-white mb-1">{strength.title}</h4>
+                    <p className="text-xs text-navy-500 dark:text-navy-400">{strength.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. BUSINESS IMPACT (STATS RE-INTEGRATED) */}
+      <section className="py-24 bg-navy-900 text-white relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-xs font-bold text-gold-500 uppercase tracking-widest mb-3">Proven Results</h2>
+            <h3 className="text-3xl sm:text-5xl font-black mb-6">Business Impact</h3>
+            <p className="text-navy-300">Our solutions help enterprises achieve significant operational improvements.</p>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { target: 99, suffix: ".9%", label: "System Availability" },
+              { target: 80, suffix: "%+", label: "Query Speed Improvement" },
+              { target: 70, suffix: "%", label: "Reduction in Downtime" },
+              { target: 60, suffix: "%", label: "Operational Efficiency" }
+            ].map((stat, i) => (
+              <div key={i} className="text-center">
+                <div className="text-4xl sm:text-6xl font-black text-gold-500 mb-2">
+                  <AnimatedCounter target={stat.target} suffix={stat.suffix} />
+                </div>
+                <div className="text-xs sm:text-sm font-bold text-navy-400 uppercase tracking-widest">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 8. INDUSTRIES WE SUPPORT */}
+      <section className="py-24 bg-white dark:bg-navy-950 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-xs font-bold text-gold-500 uppercase tracking-widest mb-3">Industry Focus</h2>
+            <h3 className="text-3xl sm:text-5xl font-black text-navy-900 dark:text-white mb-6">Industries We Support</h3>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6">
+            {[
+              { name: "Automotive", icon: Wrench },
+              { name: "Healthcare", icon: HeartPulse },
+              { name: "Education", icon: GraduationCap },
+              { name: "Manufacturing", icon: Settings },
+              { name: "Retail & Inventory", icon: ShoppingCart },
+              { name: "Logistics", icon: Rocket },
+              { name: "Banking & Finance", icon: Database },
+              { name: "Enterprise IT", icon: Server }
+            ].map((ind, i) => (
+              <div key={i} className="p-8 rounded-3xl bg-navy-50 dark:bg-navy-900 border border-navy-100 dark:border-navy-800 flex flex-col items-center text-center hover:scale-105 transition-transform group">
+                <div className="w-16 h-16 rounded-2xl bg-white dark:bg-navy-800 text-gold-500 flex items-center justify-center mb-6 shadow-sm group-hover:bg-gold-500 group-hover:text-navy-950 transition-all">
+                  <ind.icon className="w-8 h-8" />
+                </div>
+                <h4 className="font-bold text-navy-900 dark:text-white">{ind.name}</h4>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 9. ENTERPRISE FOCUS */}
+      <section className="py-24 bg-navy-50/50 dark:bg-navy-900/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="glass-card bg-navy-900 dark:bg-navy-950 p-10 sm:p-16 rounded-[3rem] border-navy-800 overflow-hidden relative">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-gold-500/10 rounded-full blur-[100px]" />
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-xs font-bold text-gold-500 uppercase tracking-widest mb-4">Enterprise Focus</h2>
+                <h3 className="text-3xl sm:text-4xl font-black text-white mb-6">Built for Critical Production Environments</h3>
+                <p className="text-navy-300 text-lg mb-8">
+                  We understand enterprise challenges like database downtime risks, performance bottlenecks, and multi-location management. Our solutions are designed with zero compromise on reliability.
+                </p>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[
+                    "Zero data loss strategy",
+                    "Multi-location support",
+                    "High transaction handling",
+                    "Security & Compliance"
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center gap-3 text-navy-100">
+                      <div className="w-2 h-2 rounded-full bg-gold-500" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="bg-navy-800/50 p-8 rounded-3xl border border-navy-700/50">
+                <blockquote className="text-xl italic text-navy-100 leading-relaxed">
+                  "Our solutions are designed to handle critical production environments with zero compromise on reliability."
+                </blockquote>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

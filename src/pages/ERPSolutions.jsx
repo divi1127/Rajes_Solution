@@ -2,20 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Cpu, ArrowRight, CheckCircle2, LayoutGrid, Wrench, GraduationCap, 
-  Briefcase, Sun, HeartPulse, ShoppingCart, Settings, Scissors 
+  Briefcase, Sun, HeartPulse, ShoppingCart, Settings, Scissors, Bed, Layout, CreditCard, Package
 } from 'lucide-react';
 import { erpProducts } from '../data/erpData';
 import RequestModal from '../components/RequestModal';
+import { motion } from 'framer-motion';
 
 export default function ERPSolutions() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    document.title = "ERP Solutions | Rajes Solutions";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute("content", "Explore our smart vertical-specific ERP software. Workshop, School, Payroll, Temple, Hospital, Supermarket, Manufacturing, and Textile ERPs.");
-    }
+    document.title = "Enterprise ERP Solutions | Specialized Industry Software | Rajes Solutions";
+    window.scrollTo(0, 0);
   }, []);
 
   const iconMap = {
@@ -26,150 +24,155 @@ export default function ERPSolutions() {
     HeartPulse: HeartPulse,
     ShoppingCart: ShoppingCart,
     Settings: Settings,
-    Scissors: Scissors
+    Scissors: Scissors,
+    Bed: Bed,
+    Layout: Layout
   };
 
-  const coreFeatures = [
-    { title: "Dynamic Invoicing & Billing", description: "Automated calculation of complex tariffs, taxes (GST), and instant receipts." },
-    { title: "Inventory & Warehousing", description: "Batch numbers, barcode scanning, auto-stock alert thresholds, and tracking." },
-    { title: "Statutory Reporting & BI", description: "Customizable visual reports, spreadsheet outputs, and dashboard metrics." },
-    { title: "HR & Payroll Processing", description: "Integrated biometric attendance, shift structures, and salary calculations." },
-    { title: "Client Relationship (CRM)", description: "SMS and WhatsApp automated notification triggers and status logs." },
-    { title: "Cloud Integration", description: "Encrypted daily backup cycles, 24/7 web access, and role-based permissions." }
-  ];
-
-  const benefits = [
-    { title: "Reduce Manual Friction", desc: "Eliminate spreadsheet workarounds. Unify departments into a single secure ledger." },
-    { title: "Enhanced Audit Trail", desc: "Every transaction, invoice revision, and dispatch is logged with strict user identifiers." },
-    { title: "Data-Driven Growth", desc: "Identify high-margin products and cost leakages with advanced analytics." }
+  const coreCapabilities = [
+    { title: "Dynamic Invoicing", desc: "Automated GST/tax calculations and instant digital receipts." },
+    { title: "Inventory Control", desc: "Real-time stock tracking with barcode and expiry management." },
+    { title: "Statutory Reporting", desc: "Compliance-ready reports and advanced business analytics." },
+    { title: "Multi-Location Sync", desc: "Centralized management for businesses with multiple branches." },
+    { title: "Cloud Reliability", desc: "Encrypted backups and 24/7 access from any device." },
+    { title: "Process Automation", desc: "Streamlined workflows to eliminate manual data entry errors." }
   ];
 
   return (
-    <div className="py-12 bg-navy-50/30 dark:bg-navy-950/20">
+    <div className="bg-white dark:bg-navy-950 min-h-screen text-navy-900 dark:text-white transition-colors">
       
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center pt-24 pb-20 px-4 overflow-hidden mb-16">
+      <section className="relative h-screen flex items-center justify-center px-4 overflow-hidden bg-navy-900">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://i.pinimg.com/1200x/44/88/e7/4488e7eb248bab4a4cef19eb71f17da0.jpg" 
-            alt="ERP Solutions Bg" 
-            className="w-full h-full object-cover opacity-60"
+            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop" 
+            alt="ERP Systems" 
+            className="w-full h-full object-cover opacity-20"
           />
-          <div className="absolute inset-0 bg-navy-950/20 bg-gradient-to-b from-navy-950/40 via-transparent to-navy-50/30 dark:to-navy-950/20" />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy-950/50 via-navy-950/80 to-navy-950" />
         </div>
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h1 className="text-xs font-bold text-gold-500 uppercase tracking-widest mb-3">Enterprise Suite</h1>
-          <h2 className="font-sans font-black text-4xl sm:text-6xl text-white mb-6">
-            Smart ERP Solutions
-          </h2>
-          <p className="text-navy-100 text-base sm:text-xl max-w-3xl mx-auto leading-relaxed">
-            Scale your enterprise operations with vertical-specific software modules. Our systems are built around your actual industry workflows.
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-4xl mx-auto text-center relative z-10"
+        >
+          <span className="inline-block px-4 py-1 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-500 text-xs font-bold tracking-widest uppercase mb-6">
+            Industry Specific Modules
+          </span>
+          <h1 className="font-sans font-black text-5xl sm:text-7xl mb-8 leading-tight text-white">
+            Enterprise <span className="text-gradient-gold">ERP</span> Solutions
+          </h1>
+          <p className="text-navy-100 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
+            Scale your operations with tailored software modules built for your specific industry. We don't believe in one-size-fits-all.
           </p>
-        </div>
+        </motion.div>
       </section>
 
-      {/* Categories Grid */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
+      {/* Product Categories */}
+      <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {erpProducts.map((erp) => {
-            const IconComp = iconMap[erp.icon] || Cpu;
+          {erpProducts.map((erp, i) => {
+            const IconComp = iconMap[erp.icon] || Layout;
             return (
-              <div key={erp.slug} className="glass-card hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col h-full border border-navy-100/40 dark:border-navy-800/40">
-                <div className="p-6 sm:p-8 flex-grow">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/20 text-gold-500 flex items-center justify-center flex-shrink-0">
-                      <IconComp className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <h3 className="font-sans font-bold text-lg text-navy-900 dark:text-white">
-                        {erp.name}
-                      </h3>
-                      <span className="text-[10px] text-gold-500 font-semibold tracking-wider uppercase bg-gold-500/5 px-2 py-0.5 rounded border border-gold-500/10">
-                        Active Module
-                      </span>
-                    </div>
-                  </div>
-                  <p className="text-navy-600 dark:text-navy-300 text-sm leading-relaxed mb-6">
-                    {erp.shortDesc}
-                  </p>
-                  <ul className="space-y-2">
-                    {erp.features.slice(0, 3).map((feat, i) => (
-                      <li key={i} className="text-xs text-navy-500 dark:text-navy-400 flex items-center gap-1.5">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-gold-500 flex-shrink-0" />
-                        <span>{feat.title}</span>
-                      </li>
-                    ))}
-                  </ul>
+              <motion.div
+                key={erp.slug}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="group p-8 rounded-[2rem] bg-navy-50 dark:bg-navy-900 border border-navy-100 dark:border-navy-800 hover:border-gold-500/50 transition-all flex flex-col h-full"
+              >
+                <div className="w-14 h-14 rounded-2xl bg-white dark:bg-navy-800 text-gold-500 flex items-center justify-center mb-8 shadow-sm group-hover:bg-gold-500 group-hover:text-navy-950 transition-all">
+                  <IconComp className="w-7 h-7" />
                 </div>
-                <div className="p-6 bg-navy-100/20 dark:bg-navy-900/30 border-t border-navy-100/30 dark:border-navy-800/30 rounded-b-2xl">
-                  <Link
-                    to={`/erp/${erp.slug}`}
-                    className="inline-flex items-center gap-1.5 text-sm font-bold text-gold-500 hover:text-gold-400 group/link transition-colors"
-                  >
-                    View detailed roadmap 
-                    <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-                  </Link>
+                <h3 className="text-2xl font-black text-navy-900 dark:text-white mb-4 group-hover:text-gold-500 transition-colors uppercase tracking-tight">{erp.name}</h3>
+                <p className="text-navy-600 dark:text-navy-400 text-sm leading-relaxed mb-8 flex-grow">
+                  {erp.shortDesc}
+                </p>
+                <div className="space-y-3 mb-10">
+                  {erp.features.slice(0, 3).map((f, idx) => (
+                    <div key={idx} className="flex items-center gap-3 text-xs font-bold text-navy-500 dark:text-navy-300">
+                      <CheckCircle2 className="w-4 h-4 text-gold-500 flex-shrink-0" />
+                      {f.title}
+                    </div>
+                  ))}
                 </div>
-              </div>
+                <Link
+                  to={`/erp/${erp.slug}`}
+                  className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-white dark:bg-navy-800 border border-navy-200 dark:border-navy-700 text-navy-900 dark:text-white font-bold text-sm group-hover:bg-gold-500 group-hover:text-navy-950 group-hover:border-gold-500 transition-all"
+                >
+                  Explore Features <ArrowRight className="w-4 h-4" />
+                </Link>
+              </motion.div>
             );
           })}
         </div>
       </section>
 
-      {/* Core Features Grid */}
-      <section className="bg-navy-900 text-white py-24 mb-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gold-500/[0.01] pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-xs font-bold text-gold-400 uppercase tracking-widest mb-3">Modular Engine</h2>
-            <h3 className="font-sans font-bold text-3xl text-white">
-              Core Capabilities in Every Implementation
-            </h3>
-            <p className="text-navy-300 mt-4 text-sm sm:text-base">
-              Each vertical module shares our robust enterprise foundation, providing top-tier speed, security, and scalability.
-            </p>
+      {/* Core Capabilities */}
+      <section className="py-24 bg-navy-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <h2 className="text-xs font-bold text-gold-500 uppercase tracking-widest mb-3">Modular Engine</h2>
+            <h3 className="text-3xl sm:text-5xl font-black mb-6">Core ERP Capabilities</h3>
+            <p className="text-navy-300 text-lg">Every module is built on our high-performance enterprise foundation.</p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {coreFeatures.map((f, i) => (
-              <div key={i} className="p-6 rounded-2xl bg-navy-850 border border-navy-800 hover:border-gold-500/35 transition-colors">
-                <h4 className="font-sans font-bold text-lg text-white mb-2">{f.title}</h4>
-                <p className="text-navy-300 text-sm leading-relaxed">{f.description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {coreCapabilities.map((cap, i) => (
+              <div key={i} className="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-gold-500/30 transition-all">
+                <h4 className="text-xl font-bold text-white mb-3">{cap.title}</h4>
+                <p className="text-navy-300 text-sm leading-relaxed">{cap.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {benefits.map((b, i) => (
-            <div key={i} className="glass-card p-8 border border-navy-100/40 dark:border-navy-850">
-              <div className="w-10 h-10 rounded-lg bg-gold-500/10 border border-gold-500/20 text-gold-500 flex items-center justify-center mb-6">
-                <LayoutGrid className="w-5 h-5" />
+      {/* Business Value */}
+      <section className="py-24 bg-white dark:bg-navy-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="p-12 sm:p-20 rounded-[3rem] bg-navy-50 dark:bg-navy-900/40 border border-navy-100 dark:border-navy-800 flex flex-col lg:flex-row items-center gap-20">
+            <div className="lg:w-1/2">
+              <h3 className="text-3xl sm:text-5xl font-black text-navy-900 dark:text-white mb-8 leading-tight">Digital Transformation for Every Vertical</h3>
+              <p className="text-navy-600 dark:text-navy-300 text-lg mb-10 leading-relaxed">
+                By unifying your departments into a single secure ledger, you eliminate manual friction and gain real-time visibility into your business health.
+              </p>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="p-6 rounded-2xl bg-white dark:bg-navy-950 border border-navy-100 dark:border-navy-800">
+                  <div className="text-3xl font-black text-gold-500 mb-1">30%</div>
+                  <div className="text-xs font-bold text-navy-500 uppercase">Efficiency Gain</div>
+                </div>
+                <div className="p-6 rounded-2xl bg-white dark:bg-navy-950 border border-navy-100 dark:border-navy-800">
+                  <div className="text-3xl font-black text-gold-500 mb-1">100%</div>
+                  <div className="text-xs font-bold text-navy-500 uppercase">Data Accuracy</div>
+                </div>
               </div>
-              <h4 className="font-sans font-bold text-xl text-navy-900 dark:text-white mb-3">{b.title}</h4>
-              <p className="text-navy-600 dark:text-navy-300 text-sm leading-relaxed">{b.desc}</p>
             </div>
-          ))}
+            <div className="lg:w-1/2">
+              <img 
+                src="https://images.unsplash.com/photo-1551288049-bbbda5366392?q=80&w=2070&auto=format&fit=crop" 
+                alt="Data Analytics" 
+                className="rounded-3xl shadow-2xl"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pb-12">
-        <div className="glass-card p-12 bg-gradient-to-r from-navy-900 via-navy-950 to-navy-900 text-white border-none shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-80 h-80 bg-gold-500/5 rounded-full blur-[80px]" />
-          <h3 className="font-sans font-bold text-3xl mb-4 relative z-10">Ready to Modernize Your Operations?</h3>
-          <p className="text-navy-300 max-w-xl mx-auto text-sm leading-relaxed mb-8 relative z-10">
-            Let's discuss your custom configurations. Request a priority layout review and demo session with our products team.
+      {/* CTA */}
+      <section className="py-24 text-center px-4">
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-3xl sm:text-4xl font-black text-navy-900 dark:text-white mb-8">Ready for a Custom Demonstration?</h3>
+          <p className="text-navy-600 dark:text-navy-400 text-lg mb-10">
+            Schedule a session with our product leads to see how our ERP can be configured for your specific needs.
           </p>
           <button
             onClick={() => setIsOpen(true)}
-            className="px-8 py-4 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-navy-950 font-bold transition-all relative z-10 active:scale-95 shadow-lg shadow-gold-500/10"
+            className="px-10 py-5 rounded-2xl bg-gradient-to-r from-gold-500 to-gold-600 text-navy-950 font-black text-xl transition-all shadow-xl hover:shadow-gold-500/20"
           >
-            Schedule Custom Demo
+            Book Free Demo
           </button>
         </div>
       </section>

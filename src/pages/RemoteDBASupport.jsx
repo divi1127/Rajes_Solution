@@ -2,225 +2,234 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Database, ShieldCheck, Zap, Activity, RefreshCw, Eye, 
-  ArrowRight, CheckCircle2, ChevronRight, Play, Terminal 
+  ArrowRight, CheckCircle2, ChevronRight, Play, Terminal, Cloud, ShieldAlert, Settings, Wrench
 } from 'lucide-react';
 import { dbaServices } from '../data/dbaData';
 import RequestModal from '../components/RequestModal';
+import { motion } from 'framer-motion';
 
 export default function RemoteDBASupport() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    document.title = "24/7 Remote DBA Support & SQL Tuning | Rajes Solutions";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute("content", "Get high-performance remote DBA support. 24/7 database monitoring, query tuning, AlwaysOn configurations, backup planning, and migration support.");
-    }
+    document.title = "24/7 Remote DBA Support | Sybase, SQL Server, Postgres | Rajes Solutions";
+    window.scrollTo(0, 0);
   }, []);
 
-  const iconMap = {
-    Database: Database,
-    Zap: Zap,
-    ShieldCheck: ShieldCheck,
-    Activity: Activity,
-    RefreshCw: RefreshCw,
-    ShieldAlert: ShieldCheck // Fallback
-  };
-
-  const steps = [
-    { num: '01', title: 'Comprehensive Audit', desc: 'We assess server configurations, trace slow index queries, and flag storage limits.' },
-    { num: '02', title: '24/7 Monitoring Setup', desc: 'Deploy lightweight collectors to track CPU levels, blocking processes, and disk states.' },
-    { num: '03', title: 'Active Optimization', desc: 'Rewrite queries, reorganize indexing structures, and implement high availability clusters.' },
-    { num: '04', title: 'Continuous Governance', desc: 'Provide weekly performance logs, verify database backups, and apply security patches.' }
+  const dbaExpertise = [
+    {
+      title: "24×7 Monitoring & Incident Management",
+      icon: Activity,
+      desc: "Proactive monitoring of database health, blocking processes, and automated incident response."
+    },
+    {
+      title: "Performance Tuning & Optimization",
+      icon: Zap,
+      desc: "Query optimization, index management, and server-level configuration tuning for maximum speed."
+    },
+    {
+      title: "High Availability & Disaster Recovery",
+      icon: ShieldCheck,
+      desc: "Implementing AlwaysOn, Clustering, and robust backup/recovery strategies."
+    },
+    {
+      title: "Database Upgrades & Migration",
+      icon: RefreshCw,
+      desc: "Seamless upgrades of SQL Server, Sybase, and PostgreSQL with zero data loss."
+    },
+    {
+      title: "Security & Compliance Audits",
+      icon: ShieldAlert,
+      desc: "Database hardening, permission audits, and ensuring industry compliance."
+    },
+    {
+      title: "Cloud Database Support",
+      icon: Cloud,
+      desc: "Expert management of Azure SQL, AWS RDS, and hybrid cloud database environments."
+    }
   ];
 
-  const dbTechs = [
-    { name: 'Microsoft SQL Server', roles: 'AlwaysOn Availability Groups, SSRS/SSIS, Performance Tuning' },
-    { name: 'SAP HANA', roles: 'Memory optimization, scale-out administrations, database audits' },
-    { name: 'MySQL & PostgreSQL', roles: 'Replication setups, query index optimization, backup verification' },
-    { name: 'Sybase ASE & IQ', roles: 'Legacy maintenance, security patching, storage analysis' }
+  const technologies = [
+    { name: "SQL Server", versions: "2012 to 2022", icon: Database },
+    { name: "Sybase ASE & IQ", versions: "Enterprise Maintenance", icon: Database },
+    { name: "PostgreSQL", versions: "Open Source Excellence", icon: Database },
+    { name: "Azure SQL / AWS RDS", versions: "Cloud Native", icon: Cloud }
   ];
 
   return (
-    <div className="py-12 bg-navy-50/20 dark:bg-navy-950/20">
+    <div className="bg-white dark:bg-navy-950 min-h-screen text-navy-900 dark:text-white transition-colors">
       
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 mb-16">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-7">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-500 dark:text-gold-400 text-xs font-semibold mb-4">
-              <span className="w-2 h-2 rounded-full bg-gold-500 animate-ping" />
-              SLA Backed Database Reliability
-            </div>
-            <h1 className="font-sans font-black text-4xl sm:text-5xl text-navy-900 dark:text-white leading-tight mb-6">
-              Enterprise Remote DBA Services
+      <section className="relative h-screen flex items-center justify-center px-4 overflow-hidden bg-navy-900">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1544380903-5961db1b7ebd?q=80&w=2070&auto=format&fit=crop" 
+            alt="Database Server" 
+            className="w-full h-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy-950/50 via-navy-950/80 to-navy-950" />
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <span className="inline-block px-4 py-1 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-500 text-xs font-bold tracking-widest uppercase mb-6">
+              24×7 Managed Services
+            </span>
+            <h1 className="font-sans font-black text-5xl sm:text-7xl mb-8 leading-tight text-white">
+              Remote <span className="text-gradient-gold">DBA</span> Support
             </h1>
-            <p className="text-navy-600 dark:text-navy-300 text-base sm:text-lg leading-relaxed mb-8">
-              Protect your database assets and eliminate downtime. Our certified team of remote database administrators monitors, tunes, and secures your infrastructures round-the-clock.
+            <p className="text-navy-100 text-lg sm:text-xl leading-relaxed mb-10">
+              Expert database administration for SQL Server, Sybase, and PostgreSQL. We ensure your mission-critical data remains available, secure, and fast.
             </p>
-            <button
-              onClick={() => setIsOpen(true)}
-              className="px-8 py-4 rounded-xl font-bold bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-navy-950 shadow-lg shadow-gold-500/10 transition-all active:scale-95 cursor-pointer"
-            >
-              Get Free SQL Health Check &rarr;
-            </button>
-          </div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button
+                onClick={() => setIsOpen(true)}
+                className="px-8 py-4 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 text-navy-950 font-black text-lg transition-all shadow-xl hover:shadow-gold-500/20"
+              >
+                Free SQL Health Check
+              </button>
+              <Link
+                to="/contact-us"
+                className="px-8 py-4 rounded-xl bg-white/5 border border-white/10 text-white font-bold text-lg hover:bg-white/10 transition-all text-center"
+              >
+                Talk to a DBA Lead
+              </Link>
+            </div>
+          </motion.div>
 
-          {/* Database Monitor Graphic */}
-          <div className="lg:col-span-5 relative animate-float">
-            <div className="absolute inset-0 bg-gold-500/5 dark:bg-gold-500/10 rounded-2xl blur-xl opacity-60" />
-            <div className="relative glass-card p-6 border-white/20 dark:border-navy-850 shadow-2xl bg-navy-900/90 text-navy-200 font-mono text-xs overflow-hidden">
-              <div className="flex items-center gap-2 pb-4 mb-4 border-b border-navy-800">
-                <Terminal className="w-4 h-4 text-gold-500" />
-                <span className="text-white font-semibold">sql_health_dashboard.sql</span>
+          {/* Code/Terminal Graphic */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative hidden lg:block"
+          >
+            <div className="absolute inset-0 bg-gold-500/20 blur-[100px] rounded-full" />
+            <div className="relative glass-card bg-navy-900 border-navy-800 p-8 rounded-3xl overflow-hidden font-mono text-sm leading-relaxed text-navy-300">
+              <div className="flex gap-2 mb-6 border-b border-navy-800 pb-4">
+                <div className="w-3 h-3 rounded-full bg-rose-500" />
+                <div className="w-3 h-3 rounded-full bg-amber-500" />
+                <div className="w-3 h-3 rounded-full bg-emerald-500" />
+                <span className="ml-2 text-xs text-navy-500">ha_monitor.sql</span>
               </div>
-              <div className="space-y-3">
-                <div className="flex justify-between">
-                  <span className="text-navy-400">Server Name:</span>
-                  <span className="text-white">PROD-DB-CLUSTER</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-navy-400">Uptime SLA:</span>
-                  <span className="text-emerald-400 font-bold">99.998%</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-navy-400">Database Engine:</span>
-                  <span className="text-gold-450">SQL Server 2022 Enterprise</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-navy-400">AlwaysOn Sync State:</span>
-                  <span className="text-emerald-400 font-semibold">SYNCHRONIZED</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-navy-400">TempDB Allocation:</span>
-                  <span className="text-emerald-400">Healthy (0.2% Write Wait)</span>
-                </div>
-                <div className="p-3 bg-navy-950/80 rounded border border-navy-850 text-[10px] text-navy-300">
-                  <span className="text-gold-400">$</span> exec sp_whoisactive;<br />
-                  <span className="text-navy-400">-- 0 active locks, 18 background processes sleeping. --</span>
-                </div>
+              <div className="space-y-2">
+                <p><span className="text-purple-400">SELECT</span> status, cluster_state <span className="text-purple-400">FROM</span> sys.dm_hadr_availability_replica_states;</p>
+                <p className="text-emerald-400">-- [SYNCHRONIZED] All replicas healthy</p>
+                <br />
+                <p><span className="text-purple-400">EXEC</span> sp_configure <span className="text-gold-400">'max degree of parallelism'</span>, 8;</p>
+                <p className="text-navy-500">-- Optimizing for OLTP workload...</p>
+                <br />
+                <p><span className="text-purple-400">DBCC</span> CHECKDB ('PROD_ERP') <span className="text-purple-400">WITH</span> NO_INFOMSGS;</p>
+                <p className="text-emerald-400">-- Integrity Check: 0 Errors found</p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-xs font-bold text-gold-500 uppercase tracking-widest mb-3">DBA Capabilities</h2>
-          <h3 className="font-sans font-black text-3xl text-navy-900 dark:text-white">
-            Comprehensive Database Administration
-          </h3>
+      {/* DBA Expertise Grid */}
+      <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <h2 className="text-xs font-bold text-gold-500 uppercase tracking-widest mb-3">Enterprise DBA Services</h2>
+          <h3 className="text-3xl sm:text-5xl font-black text-navy-900 dark:text-white mb-6">Expert Database Management</h3>
+          <p className="text-navy-600 dark:text-navy-300 text-lg">We provide specialized support for high-transaction enterprise databases where uptime is non-negotiable.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {dbaServices.map((service) => {
-            const IconComp = iconMap[service.icon] || Database;
-            return (
-              <div key={service.slug} className="glass-card hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col h-full border border-navy-100/40 dark:border-navy-800/40">
-                <div className="p-6 sm:p-8 flex-grow">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/20 text-gold-500 flex items-center justify-center flex-shrink-0">
-                      <IconComp className="w-6 h-6" />
-                    </div>
-                    <h3 className="font-sans font-bold text-lg text-navy-900 dark:text-white">
-                      {service.name}
-                    </h3>
-                  </div>
-                  <p className="text-navy-600 dark:text-navy-300 text-sm leading-relaxed mb-6">
-                    {service.shortDesc}
-                  </p>
-                  <ul className="space-y-2 text-xs text-navy-500 dark:text-navy-400">
-                    {service.capabilities.slice(0, 3).map((cap, i) => (
-                      <li key={i} className="flex items-start gap-1.5">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-gold-500 flex-shrink-0 mt-0.5" />
-                        <span><strong>{cap.title}:</strong> {cap.description}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="p-6 bg-navy-100/20 dark:bg-navy-900/30 border-t border-navy-100/30 dark:border-navy-800/30 rounded-b-2xl">
-                  <Link
-                    to={`/dba/${service.slug}`}
-                    className="inline-flex items-center gap-1.5 text-sm font-bold text-gold-500 hover:text-gold-400 group/link transition-colors"
-                  >
-                    View deliverables 
-                    <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
+          {dbaExpertise.map((item, i) => (
+            <div key={i} className="p-8 rounded-3xl bg-navy-50 dark:bg-navy-900 border border-navy-100 dark:border-navy-800 hover:border-gold-500/50 transition-all group">
+              <div className="w-14 h-14 rounded-2xl bg-white dark:bg-navy-800 text-gold-500 flex items-center justify-center mb-8 shadow-sm group-hover:bg-gold-500 group-hover:text-navy-950 transition-all">
+                <item.icon className="w-7 h-7" />
               </div>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* Database Technologies */}
-      <section className="bg-navy-900 text-white py-24 mb-24 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-xs font-bold text-gold-450 uppercase tracking-widest mb-3">Core Stack</h2>
-            <h3 className="font-sans font-bold text-3xl text-white">
-              Supported Database Technologies
-            </h3>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {dbTechs.map((tech, i) => (
-              <div key={i} className="p-6 sm:p-8 rounded-2xl bg-navy-850 border border-navy-800 flex gap-4 hover:border-gold-500/20 transition-all">
-                <div className="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/20 text-gold-500 flex items-center justify-center flex-shrink-0">
-                  <Database className="w-5 h-5" />
-                </div>
-                <div>
-                  <h4 className="font-sans font-bold text-lg text-white mb-2">{tech.name}</h4>
-                  <p className="text-navy-300 text-sm leading-relaxed">{tech.roles}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Timeline */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-xs font-bold text-gold-500 uppercase tracking-widest mb-3">Deployment</h2>
-          <h3 className="font-sans font-black text-3xl text-navy-900 dark:text-white">
-            Our Support Process
-          </h3>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
-          {steps.map((step, idx) => (
-            <div key={idx} className="glass-card p-6 border border-navy-100/40 dark:border-navy-850 relative group">
-              <div className="absolute top-4 right-4 text-3xl font-black text-navy-100 dark:text-navy-900 group-hover:text-gold-500/20 transition-colors font-mono">
-                {step.num}
-              </div>
-              <h4 className="font-sans font-bold text-lg text-navy-900 dark:text-white mb-3 mt-4">
-                {step.title}
-              </h4>
-              <p className="text-navy-600 dark:text-navy-300 text-sm leading-relaxed">
-                {step.desc}
-              </p>
+              <h4 className="text-xl font-bold text-navy-900 dark:text-white mb-4 group-hover:text-gold-500 transition-colors uppercase tracking-tight">{item.title}</h4>
+              <p className="text-navy-600 dark:text-navy-400 leading-relaxed text-sm">{item.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Why Choose Us & CTA */}
-      <section className="max-w-4xl mx-auto px-4 text-center pb-12">
-        <div className="glass-card p-12 bg-gradient-to-r from-navy-900 to-navy-950 text-white border-none shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-80 h-80 bg-gold-500/5 rounded-full blur-[80px]" />
-          <h3 className="font-sans font-bold text-3xl mb-4">Request a Complimentary Database Audit</h3>
-          <p className="text-navy-300 max-w-xl mx-auto text-sm leading-relaxed mb-8">
-            Identify execution bottlenecks, trace index fragmentation, and confirm backup integrity. Register for a free security and optimization report.
-          </p>
-          <button
-            onClick={() => setIsOpen(true)}
-            className="px-8 py-4 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-navy-950 font-bold transition-all active:scale-95 shadow-lg shadow-gold-500/10"
-          >
-            Claim Free SQL Health Check
-          </button>
+      {/* Tech Stack */}
+      <section className="py-24 bg-navy-900 text-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
+          <div className="flex flex-col lg:flex-row items-center gap-16">
+            <div className="lg:w-1/2">
+              <h2 className="text-xs font-bold text-gold-500 uppercase tracking-widest mb-4">Our Technology Stack</h2>
+              <h3 className="text-3xl sm:text-5xl font-black mb-8 leading-tight">Databases We Manage & Optimize</h3>
+              <p className="text-navy-300 text-lg mb-8 leading-relaxed">
+                Whether it's legacy Sybase maintenance or modernizing to PostgreSQL in the cloud, our DBAs have the deep technical knowledge required.
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                {technologies.map((tech, i) => (
+                  <div key={i} className="p-4 rounded-2xl bg-white/5 border border-white/10 flex items-center gap-4">
+                    <tech.icon className="w-6 h-6 text-gold-500" />
+                    <div>
+                      <div className="font-bold">{tech.name}</div>
+                      <div className="text-[10px] text-navy-400 uppercase tracking-widest">{tech.versions}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="lg:w-1/2 grid grid-cols-2 gap-6 translate-y-8">
+              {[
+                { title: "Query Speed", val: "85%+", color: "gold-500" },
+                { title: "Data Loss", val: "Zero", color: "gold-500" },
+                { title: "Support", val: "24×7", color: "gold-500" },
+                { title: "Latency", val: "<5ms", color: "gold-500" }
+              ].map((stat, i) => (
+                <div key={i} className={`p-8 rounded-[2rem] bg-navy-950 border border-navy-800 text-center ${i % 2 === 1 ? 'translate-y-6' : ''}`}>
+                  <div className={`text-3xl font-black text-${stat.color} mb-1`}>{stat.val}</div>
+                  <div className="text-[10px] text-navy-500 uppercase tracking-[0.2em] font-bold">{stat.title}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Roadmap/Steps */}
+      <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <h2 className="text-xs font-bold text-gold-500 uppercase tracking-widest mb-3">Onboarding</h2>
+          <h3 className="text-3xl sm:text-5xl font-black text-navy-900 dark:text-white mb-6">Our Support Journey</h3>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {[
+            { n: "01", t: "SLA Audit", d: "Performance and health baseline assessment." },
+            { n: "02", t: "Monitor Setup", d: "Deploying 24×7 proactive collection tools." },
+            { n: "03", t: "Optimization", d: "Query tuning and high availability remediation." },
+            { n: "04", t: "Maintenance", d: "Ongoing support and periodic deep-dive health checks." }
+          ].map((step, i) => (
+            <div key={i} className="relative group">
+              <div className="text-6xl font-black text-navy-100 dark:text-navy-900 mb-4 group-hover:text-gold-500/20 transition-colors">{step.n}</div>
+              <h4 className="text-lg font-black text-navy-900 dark:text-white mb-2">{step.t}</h4>
+              <p className="text-sm text-navy-500 dark:text-navy-400">{step.d}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA Box */}
+      <section className="py-24 px-4">
+        <div className="max-w-5xl mx-auto relative group">
+          <div className="absolute inset-0 bg-gold-400/20 blur-[100px] rounded-full group-hover:blur-[120px] transition-all" />
+          <div className="relative p-12 sm:p-20 rounded-[3rem] bg-navy-900 text-center border border-navy-800">
+            <h3 className="text-4xl sm:text-5xl font-black text-white mb-6">Stop Reacting to Database Failures</h3>
+            <p className="text-navy-300 text-lg mb-10 max-w-2xl mx-auto">
+              Get ahead with proactive remote DBA support. We fix bottlenecks before they impact your users.
+            </p>
+            <button
+              onClick={() => setIsOpen(true)}
+              className="px-10 py-5 rounded-2xl bg-gradient-to-r from-gold-500 to-gold-600 text-navy-950 font-black text-xl hover:from-gold-400 hover:to-gold-500 transition-all shadow-2xl"
+            >
+              Start Free Health Check
+            </button>
+          </div>
         </div>
       </section>
 

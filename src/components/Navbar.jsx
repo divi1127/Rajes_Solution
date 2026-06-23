@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
   Menu, X, Sun, Moon, Database, ChevronDown, 
-  Code, Cpu, Layers, Brain, Layout, BarChart, PhoneCall 
+  Code, Cpu, Layers, Brain, Layout, BarChart, PhoneCall, Briefcase, FileText, Settings, Rocket 
 } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -29,17 +29,27 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'Home', path: '/' },
+    { name: 'Services', path: '/services' },
     { 
-      name: 'Product', 
+      name: 'Solutions', 
       path: '#',
       subItems: [
-        { name: 'ERP Solutions', path: '/erp-solutions', icon: Layout, desc: 'Enterprise management systems' },
-        { name: 'Remote DBA', path: '/remote-dba-support', icon: Database, desc: '24/7 Database administration' },
+        { name: 'ERP Products', path: '/erp-solutions', icon: Layout, desc: 'Modular Enterprise ERP Systems' },
+        { name: 'Remote DBA', path: '/remote-dba-support', icon: Database, desc: '24/7 Managed Database Services' },
       ]
     },
-    { name: 'Services', path: '/services' },
     { name: 'Industries', path: '/industries' },
+    { 
+      name: 'Expertise', 
+      path: '#',
+      subItems: [
+        { name: 'Technologies', path: '/technologies', icon: Cpu, desc: 'Our Enterprise Tech Stack' },
+        { name: 'Case Studies', path: '/case-studies', icon: BarChart, desc: 'Real-world Implementations' },
+        { name: 'Resources', path: '/resources', icon: FileText, desc: 'Enterprise Knowledge Center' },
+      ]
+    },
     { name: 'About', path: '/about-us' },
+    { name: 'Careers', path: '/careers' },
     { name: 'Contact', path: '/contact-us' },
   ];
 

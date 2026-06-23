@@ -14,6 +14,10 @@ import Industries from './pages/Industries';
 import AboutUs from './pages/AboutUs';
 import Blog from './pages/Blog';
 import ContactUs from './pages/ContactUs';
+import Technologies from './pages/Technologies';
+import CaseStudies from './pages/CaseStudies';
+import Resources from './pages/Resources';
+import Careers from './pages/Careers';
 
 export default function App() {
   return (
@@ -30,6 +34,10 @@ export default function App() {
             <Route path="/industries" element={<Industries />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/technologies" element={<Technologies />} />
+            <Route path="/case-studies" element={<CaseStudies />} />
+            <Route path="/resources" element={<Resources />} />
+            <Route path="/careers" element={<Careers />} />
             <Route path="/contact-us" element={<ContactUs />} />
             
             {/* Fallback route redirection */}

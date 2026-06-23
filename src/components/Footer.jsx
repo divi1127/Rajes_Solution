@@ -25,28 +25,28 @@ export default function Footer() {
     {
       title: "Our Services",
       links: [
-        { name: "Frontend Development", path: "/services" },
-        { name: "Backend Development", path: "/services" },
-        { name: "Database Management", path: "/services" },
-        { name: "AI Support", path: "/services" },
+        { name: "ERP Development", path: "/services" },
+        { name: "Custom Software", path: "/services" },
+        { name: "Cloud & DevOps", path: "/services" },
+        { name: "Remote DBA Support", path: "/remote-dba-support" },
       ]
     },
     {
       title: "Solutions",
       links: [
-        { name: "ERP solutions", path: "/erp-solutions" },
-        { name: "Remote DBA Support", path: "/remote-dba-support" },
-        { name: "Custom Software", path: "/contact-us" },
+        { name: "Workshop ERP", path: "/erp/workshop-erp" },
+        { name: "Manufacturing ERP", path: "/erp/manufacturing-erp" },
+        { name: "School ERP", path: "/erp/school-erp" },
         { name: "Industries", path: "/industries" },
       ]
     },
     {
-      title: "Company",
+      title: "Resources",
       links: [
-        { name: "About Us", path: "/about-us" },
-        { name: "Contact Us", path: "/contact-us" },
-        { name: "Blog", path: "/blog" },
-        { name: "Careers", path: "/contact-us" },
+        { name: "Case Studies", path: "/case-studies" },
+        { name: "Technologies", path: "/technologies" },
+        { name: "Knowledge Center", path: "/resources" },
+        { name: "Careers", path: "/careers" },
       ]
     }
   ];
@@ -119,11 +119,11 @@ export default function Footer() {
             <div className="flex items-center gap-4 border-l border-navy-900 pl-6 hidden md:flex">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-gold-500/50" />
-                India
+                Global Support
               </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-gold-500/50" />
-                +91 88257 33129
+              <div className="flex flex-col text-xs">
+                <span>+91 88257 33129</span>
+                <span>+91 88257 09105</span>
               </div>
             </div>
           </div>
