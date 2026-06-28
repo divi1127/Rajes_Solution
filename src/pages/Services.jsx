@@ -2,9 +2,14 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Cpu, Database, Code, CheckCircle2, ArrowRight, 
-  Brain, Layout, BarChart, Server, Globe, Zap, Smartphone, Cloud, Wrench, RefreshCw, Settings
+  Brain, Layout, BarChart, Server, Globe, Zap, Smartphone, Cloud, Wrench, RefreshCw, Settings, Palette, GitBranch
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import frontendImg from '../assets/services/frontend.png';
+import uiuxImg from '../assets/services/mobile.png';
+import backendImg from '../assets/services/backend.png';
+import aiImg from '../assets/services/ai.png';
+import databaseImg from '../assets/services/database.png';
 
 export default function Services() {
   useEffect(() => {
@@ -33,7 +38,7 @@ export default function Services() {
       id: "custom-software",
       title: "Custom Software Development",
       icon: Code,
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop",
+      image: "https://i.pinimg.com/736x/87/4c/aa/874caa782bf8b3df879a78c23a2c09a1.jpg",
       description: "We build enterprise-grade software solutions tailored to specific business requirements and industry challenges.",
       features: [
         "Web application development",
@@ -49,7 +54,7 @@ export default function Services() {
       id: "cloud-devops",
       title: "Cloud & DevOps Services",
       icon: Cloud,
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop",
+      image: "https://i.pinimg.com/1200x/0c/89/1c/0c891c8da11725235508ac4279b27eb8.jpg",
       description: "We help enterprises modernize infrastructure using cloud technologies and DevOps automation practices.",
       features: [
         "Azure / AWS / Hybrid cloud solutions",
@@ -65,7 +70,7 @@ export default function Services() {
       id: "app-support",
       title: "Application Support & Maintenance",
       icon: Wrench,
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop",
+      image: "https://i.pinimg.com/1200x/4c/0d/e8/4c0de87aaf12417892672bad63cb86a9.jpg",
       description: "We provide continuous support for enterprise applications to ensure smooth operations and minimal downtime.",
       features: [
         "24×7 production support",
@@ -92,6 +97,86 @@ export default function Services() {
         "Downtime minimization"
       ],
       color: "from-emerald-500 to-teal-500"
+    },
+    {
+      id: "frontend",
+      title: "Frontend Development",
+      icon: Code,
+      image: frontendImg,
+      description: "We build modern, responsive, and high-performance frontend applications using the latest frameworks and best practices.",
+      features: [
+        "React / Next.js application development",
+        "Responsive & mobile-first design",
+        "State management & API integration",
+        "Component library development",
+        "Performance optimization",
+        "Cross-browser compatibility"
+      ],
+      color: "from-blue-500 to-indigo-500"
+    },
+    {
+      id: "ui-ux",
+      title: "UI/UX Design",
+      icon: Palette,
+      image: uiuxImg,
+      description: "We craft intuitive and engaging user experiences through research-driven design and modern interface patterns.",
+      features: [
+        "User research & persona development",
+        "Wireframing & prototyping",
+        "Visual design & branding",
+        "Interaction design",
+        "Usability testing",
+        "Design system creation"
+      ],
+      color: "from-pink-500 to-rose-500"
+    },
+    {
+      id: "backend",
+      title: "Backend Development",
+      icon: Server,
+      image: backendImg,
+      description: "We engineer robust, scalable backend systems that power enterprise applications with high reliability and performance.",
+      features: [
+        "Node.js / Python / .NET development",
+        "RESTful & GraphQL API design",
+        "Microservices architecture",
+        "Authentication & authorization",
+        "Database integration & optimization",
+        "Serverless & event-driven systems"
+      ],
+      color: "from-gray-600 to-slate-700"
+    },
+    {
+      id: "ai",
+      title: "AI & Intelligent Automation",
+      icon: Brain,
+      image: aiImg,
+      description: "We leverage artificial intelligence and machine learning to automate processes, extract insights, and drive smarter business decisions.",
+      features: [
+        "Machine learning model development",
+        "Natural language processing (NLP)",
+        "Predictive analytics solutions",
+        "Intelligent document processing",
+        "Process automation (RPA)",
+        "AI-powered chatbots & assistants"
+      ],
+      color: "from-violet-500 to-purple-600"
+    },
+    {
+      id: "database-service",
+      title: "Database Design & Administration",
+      icon: Database,
+      image: databaseImg,
+      description: "We provide expert database design, administration, and optimization services for mission-critical enterprise environments.",
+      features: [
+        "SQL Server / PostgreSQL / MySQL administration",
+        "Database architecture & modeling",
+        "Performance tuning & query optimization",
+        "Backup, recovery & DR planning",
+        "Security & compliance hardening",
+        "24/7 database monitoring & support"
+      ],
+      color: "from-green-500 to-emerald-600"
     }
   ];
 
@@ -106,7 +191,7 @@ export default function Services() {
             alt="Services Hero" 
             className="w-full h-full object-cover opacity-30"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-navy-950/50 via-navy-950/80 to-navy-950" />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy-950/30 via-navy-950/60 to-navy-950/90" />
         </div>
         
         <motion.div

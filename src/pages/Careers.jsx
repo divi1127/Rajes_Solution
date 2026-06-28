@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  Users, Rocket, Heart, Brain, Briefcase, ArrowRight, 
-  Database, Code, Globe, Star, MapPin, Search, X, Send, Paperclip
+  Rocket, Brain, ArrowRight, 
+  Globe, Star, MapPin, Search, X, Send, Paperclip
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -68,7 +68,7 @@ export default function Careers() {
             alt="Office Team" 
             className="w-full h-full object-cover opacity-20"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-navy-950/50 via-navy-950/80 to-navy-950" />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy-950/30 via-navy-950/60 to-navy-950/90" />
         </div>
         
         <motion.div
@@ -249,7 +249,7 @@ export default function Careers() {
                   <input type="file" accept=".pdf,.doc,.docx" required onChange={handleResumeChange} className="hidden" />
                 </label>
                 {applyForm.resumeName && (
-                  <p className="text-[10px] text-emerald-500 font-bold mt-1 ml-1">✓ {applyForm.resumeName} selected — will be noted in email</p>
+                  <p className="text-[10px] text-emerald-500 font-bold mt-1 ml-1">✓ {applyForm.resumeName} selected</p>
                 )}
                 <p className="text-[10px] text-navy-400 mt-1 ml-1">Attach the file manually in the email compose window that opens.</p>
               </div>

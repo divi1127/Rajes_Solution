@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Database, ShieldCheck, Award, Heart, ShieldAlert, Cpu, HeartPulse, CheckCircle2, UserCheck, Star, Zap, Activity, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import leaderPhoto from '../assets/SaravananSoundararajanRaje\'sSolutions.png';
 
 export default function AboutUs() {
   useEffect(() => {
@@ -38,7 +39,7 @@ export default function AboutUs() {
             alt="Team Working" 
             className="w-full h-full object-cover opacity-20"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-navy-950/50 via-navy-950/80 to-navy-950" />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy-950/30 via-navy-950/60 to-navy-950/90" />
         </div>
         
         <motion.div
@@ -72,12 +73,12 @@ export default function AboutUs() {
               <div className="absolute inset-0 bg-gold-500/20 blur-[80px] rounded-full group-hover:blur-[100px] transition-all" />
               <div className="relative glass-card bg-navy-900 border-navy-800 p-8 rounded-[3rem] overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop" 
-                  alt="S. Rajesh" 
+                  src={leaderPhoto} 
+                  alt="Saravanan Soundararajan" 
                   className="w-full aspect-square object-cover rounded-2xl mb-8 grayscale hover:grayscale-0 transition-all duration-500"
                 />
                 <div className="text-center">
-                  <h3 className="text-2xl font-black text-white">S. Rajesh</h3>
+                  <h3 className="text-2xl font-black text-white">Saravanan Soundararajan</h3>
                   <p className="text-gold-500 font-bold uppercase tracking-widest text-xs mb-4">Technical Lead & Advisory</p>
                   <div className="flex items-center justify-center gap-4 text-navy-400 text-sm">
                     <div className="flex items-center gap-1">

@@ -84,7 +84,7 @@ export default function Home() {
             alt="CRT Monitor Display" 
             className="w-full h-full object-cover opacity-30"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-navy-950/50 via-navy-950/80 to-navy-950" />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy-950/30 via-navy-950/60 to-navy-950/90" />
         </div>
         
         {/* Animated Particles background simulation */}

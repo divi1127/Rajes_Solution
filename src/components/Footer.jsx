@@ -26,7 +26,7 @@ export default function Footer() {
       title: "Our Services",
       links: [
         { name: "ERP Development", path: "/services" },
-        { name: "Custom Software", path: "/services" },
+        { name: "Custom Software", path: "/services#custom-software" },
         { name: "Cloud & DevOps", path: "/services" },
         { name: "Remote DBA Support", path: "/remote-dba-support" },
       ]
