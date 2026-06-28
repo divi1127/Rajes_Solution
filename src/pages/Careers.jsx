@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Users, Rocket, Heart, Brain, Briefcase, ArrowRight, 
-  Database, Code, Globe, Star, MapPin, Search
+  Database, Code, Globe, Star, MapPin, Search, X, Send, Paperclip
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -10,6 +10,25 @@ export default function Careers() {
     document.title = "Careers | Join Our Engineering Team | Rajes Solutions";
     window.scrollTo(0, 0);
   }, []);
+
+  const [applyJob, setApplyJob] = useState(null);
+  const [applyForm, setApplyForm] = useState({ name: '', email: '', phone: '', message: '', resumeName: '' });
+
+  const handleResumeChange = (e) => {
+    const file = e.target.files[0];
+    if (file) setApplyForm(p => ({ ...p, resumeName: file.name }));
+  };
+
+  const handleApplySubmit = (e) => {
+    e.preventDefault();
+    const subject = encodeURIComponent(`Job Application - ${applyJob}`);
+    const body = encodeURIComponent(`Position: ${applyJob}\nName: ${applyForm.name}\nEmail: ${applyForm.email}\nPhone: ${applyForm.phone}\nResume: ${applyForm.resumeName || 'See attachment'}\n\nCover Note:\n${applyForm.message}\n\nPlease find my resume attached.`);
+    window.location.href = `mailto:saravanan.soundararajan@rajessolutions.com?subject=${subject}&body=${body}`;
+    setTimeout(() => {
+      setApplyJob(null);
+      setApplyForm({ name: '', email: '', phone: '', message: '', resumeName: '' });
+    }, 500);
+  };
 
   const culture = [
     { title: "Engineering Excellence", desc: "We prioritize deep technical knowledge and clean, efficient architectures above all else.", icon: Brain },
@@ -124,7 +143,9 @@ export default function Careers() {
                   <h3 className="text-2xl font-black text-navy-900 dark:text-white mb-3 group-hover:text-gold-500 transition-colors uppercase tracking-tight">{job.title}</h3>
                   <p className="text-navy-600 dark:text-navy-400 text-sm max-w-2xl">{job.desc}</p>
                 </div>
-                <button className="px-10 py-5 rounded-2xl bg-navy-900 dark:bg-navy-800 text-white font-black hover:bg-gold-500 hover:text-navy-950 transition-all whitespace-nowrap shadow-xl">
+                <button
+                  onClick={() => setApplyJob(job.title)}
+                  className="px-10 py-5 rounded-2xl bg-navy-900 dark:bg-navy-800 text-white font-black hover:bg-gold-500 hover:text-navy-950 transition-all whitespace-nowrap shadow-xl">
                   Apply Now
                 </button>
               </motion.div>
@@ -175,11 +196,70 @@ export default function Careers() {
           <p className="text-navy-300 text-lg mb-10">
             We are always looking for exceptional talent in database engineering and enterprise software development. Send us your resume for future considerations.
           </p>
-          <a href="mailto:info@rajessolutions.com" className="inline-flex items-center gap-3 px-10 py-5 rounded-2xl bg-gradient-to-r from-gold-500 to-gold-600 text-navy-950 font-black text-xl hover:shadow-gold-500/20 transition-all">
+          <a
+            href="mailto:saravanan.soundararajan@rajessolutions.com?subject=Resume%20Submission%20-%20Rajes%20Solutions&body=Hi%20Rajes%20Solutions%20Team,%0A%0APlease%20find%20my%20resume%20attached%20for%20your%20consideration.%0A%0AName:%0APhone:%0ASpecialty:%0A%0AThank%20you."
+            className="inline-flex items-center gap-3 px-10 py-5 rounded-2xl bg-gradient-to-r from-gold-500 to-gold-600 text-navy-950 font-black text-xl hover:shadow-gold-500/20 transition-all">
             Email Your Resume <ArrowRight className="w-5 h-5" />
           </a>
         </div>
       </section>
+
+      {/* Apply Modal */}
+      {applyJob && (
+        <div className="fixed inset-0 z-[999] flex items-center justify-center px-4">
+          <div className="fixed inset-0 bg-navy-950/80 backdrop-blur-sm" onClick={() => setApplyJob(null)} />
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0, y: 20 }}
+            animate={{ scale: 1, opacity: 1, y: 0 }}
+            className="relative w-full max-w-lg bg-white dark:bg-navy-900 rounded-3xl shadow-2xl z-10 p-8 border border-navy-100 dark:border-navy-800"
+          >
+            <button onClick={() => setApplyJob(null)} className="absolute top-4 right-4 p-1.5 rounded-lg hover:bg-navy-100 dark:hover:bg-navy-800 text-navy-400 transition-colors">
+              <X className="w-5 h-5" />
+            </button>
+            <h3 className="font-black text-xl text-navy-900 dark:text-white mb-1">Apply for Position</h3>
+            <p className="text-gold-500 font-bold text-sm mb-6">{applyJob}</p>
+            <form onSubmit={handleApplySubmit} className="space-y-4">
+              <div>
+                <label className="text-[10px] font-black uppercase tracking-widest text-navy-400 mb-1 block">Full Name *</label>
+                <input type="text" required value={applyForm.name} onChange={e => setApplyForm(p => ({...p, name: e.target.value}))}
+                  className="w-full px-4 py-3 rounded-xl bg-navy-50 dark:bg-navy-950 border border-navy-200 dark:border-navy-800 focus:border-gold-500 focus:outline-none font-bold text-navy-900 dark:text-white text-sm" placeholder="John Doe" />
+              </div>
+              <div>
+                <label className="text-[10px] font-black uppercase tracking-widest text-navy-400 mb-1 block">Email *</label>
+                <input type="email" required value={applyForm.email} onChange={e => setApplyForm(p => ({...p, email: e.target.value}))}
+                  className="w-full px-4 py-3 rounded-xl bg-navy-50 dark:bg-navy-950 border border-navy-200 dark:border-navy-800 focus:border-gold-500 focus:outline-none font-bold text-navy-900 dark:text-white text-sm" placeholder="john@example.com" />
+              </div>
+              <div>
+                <label className="text-[10px] font-black uppercase tracking-widest text-navy-400 mb-1 block">Phone *</label>
+                <input type="tel" required value={applyForm.phone} onChange={e => setApplyForm(p => ({...p, phone: e.target.value}))}
+                  className="w-full px-4 py-3 rounded-xl bg-navy-50 dark:bg-navy-950 border border-navy-200 dark:border-navy-800 focus:border-gold-500 focus:outline-none font-bold text-navy-900 dark:text-white text-sm" placeholder="+91 98765 43210" />
+              </div>
+              <div>
+                <label className="text-[10px] font-black uppercase tracking-widest text-navy-400 mb-1 block">Cover Note</label>
+                <textarea rows="3" value={applyForm.message} onChange={e => setApplyForm(p => ({...p, message: e.target.value}))}
+                  className="w-full px-4 py-3 rounded-xl bg-navy-50 dark:bg-navy-950 border border-navy-200 dark:border-navy-800 focus:border-gold-500 focus:outline-none font-bold text-navy-900 dark:text-white text-sm" placeholder="Brief introduction and years of experience..." />
+              </div>
+              <div>
+                <label className="text-[10px] font-black uppercase tracking-widest text-navy-400 mb-1 block">Resume / CV *</label>
+                <label className="flex items-center gap-3 w-full px-4 py-3 rounded-xl bg-navy-50 dark:bg-navy-950 border border-navy-200 dark:border-navy-800 hover:border-gold-500 cursor-pointer transition-all group">
+                  <Paperclip className="w-4 h-4 text-gold-500 flex-shrink-0" />
+                  <span className="text-sm font-bold text-navy-500 dark:text-navy-400 truncate">
+                    {applyForm.resumeName || 'Click to attach your resume (PDF/DOC)'}
+                  </span>
+                  <input type="file" accept=".pdf,.doc,.docx" required onChange={handleResumeChange} className="hidden" />
+                </label>
+                {applyForm.resumeName && (
+                  <p className="text-[10px] text-emerald-500 font-bold mt-1 ml-1">✓ {applyForm.resumeName} selected — will be noted in email</p>
+                )}
+                <p className="text-[10px] text-navy-400 mt-1 ml-1">Attach the file manually in the email compose window that opens.</p>
+              </div>
+              <button type="submit" className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 text-navy-950 font-black transition-all hover:from-gold-400 hover:to-gold-500">
+                <Send className="w-4 h-4" /> Submit Application
+              </button>
+            </form>
+          </motion.div>
+        </div>
+      )}
 
     </div>
   );

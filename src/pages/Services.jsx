@@ -81,7 +81,7 @@ export default function Services() {
       id: "data-migration",
       title: "Data Migration Services",
       icon: RefreshCw,
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=2026&auto=format&fit=crop",
+      image: "https://i.pinimg.com/1200x/47/e1/bf/47e1bf88c59a1d9c595cb578d1b78696.jpg",
       description: "We ensure secure, accurate, and seamless migration of enterprise data across platforms and environments.",
       features: [
         "Database migration (SQL, Sybase, Postgres)",

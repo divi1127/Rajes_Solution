@@ -76,16 +76,15 @@ export default function Home() {
     <div className="relative">
       
       {/* 1. HERO SECTION */}
-      <section className="relative h-screen flex items-center justify-center pt-32 pb-20 px-4 md:px-8 overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-4 md:px-8 overflow-hidden bg-navy-900">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=2070&auto=format&fit=crop" 
-            alt="Enterprise Data Center" 
-            className="w-full h-full object-cover"
+            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop" 
+            alt="CRT Monitor Display" 
+            className="w-full h-full object-cover opacity-30"
           />
-          {/* Reduced white overlay in light mode, deep navy in dark mode */}
-          <div className="absolute inset-0 bg-white/10 dark:bg-navy-950/40 backdrop-blur-[1px] bg-gradient-to-b from-white/20 dark:from-navy-950/60 via-transparent to-navy-50 dark:to-navy-950" />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy-950/50 via-navy-950/80 to-navy-950" />
         </div>
         
         {/* Animated Particles background simulation */}
@@ -98,23 +97,15 @@ export default function Home() {
           
           {/* Hero Left Content */}
           <div className="lg:col-span-7 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-500 dark:text-gold-400 text-xs font-semibold mb-6 animate-fade-in">
-              <span className="w-2 h-2 rounded-full bg-gold-500 animate-ping" />
-              Trusted Enterprise IT Partner
-            </div>
+
             
-            <h1 className="font-sans font-extrabold text-4xl sm:text-5xl lg:text-7xl tracking-tight text-navy-900 dark:text-white leading-[1.1] mb-6">
+            <h1 className="font-sans font-extrabold text-4xl sm:text-5xl lg:text-7xl tracking-tight text-white leading-[1.1] mb-6">
               Enterprise ERP Solutions <br />
               <span className="text-gradient-gold font-black">& 24×7 Remote DBA</span>
             </h1>
 
-            <p className="text-navy-700 dark:text-navy-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8">
+            <p className="text-navy-100 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8">
               Rajes Solutions delivers enterprise ERP systems, custom software solutions, and expert database administration services that help organizations automate operations, improve performance, and ensure high availability across cloud and on-premise environments.
-            </p>
-
-            <p className="text-gold-600 dark:text-gold-400 font-bold mb-8 flex items-center justify-center lg:justify-start gap-2">
-              <ShieldCheck className="w-5 h-5" />
-              Mission-critical systems where performance, uptime, and data security are essential.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">

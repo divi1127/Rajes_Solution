@@ -43,9 +43,7 @@ export default function DBAServiceDetail() {
   const ServiceIcon = iconMap[service.icon] || Database;
 
   return (
-    <div className="py-8 bg-navy-50/20 dark:bg-navy-950/10">
-      
-      {/* Back navigation */}
+    <div className="pt-24 py-8 bg-navy-50/20 dark:bg-navy-950/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
         <Link 
           to="/remote-dba-support" 

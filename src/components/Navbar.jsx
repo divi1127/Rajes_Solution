@@ -50,7 +50,6 @@ export default function Navbar() {
     },
     { name: 'About', path: '/about-us' },
     { name: 'Careers', path: '/careers' },
-    { name: 'Contact', path: '/contact-us' },
   ];
 
   return (
@@ -166,10 +165,9 @@ export default function Navbar() {
 
             <Link
               to="/contact-us"
-              className="flex items-center gap-2 px-6 py-2.5 rounded-xl text-sm font-bold tracking-wide bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-navy-950 shadow-lg shadow-gold-500/10 hover:shadow-gold-500/20 active:scale-95 transition-all"
+              className="flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-sm font-bold tracking-wide bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-navy-950 shadow-lg shadow-gold-500/10 hover:shadow-gold-500/20 active:scale-95 transition-all"
             >
               <PhoneCall className="w-4 h-4" />
-              Contact Us
             </Link>
           </div>
 
@@ -259,7 +257,6 @@ export default function Navbar() {
                   className="w-full flex items-center justify-center gap-2 py-4 rounded-xl font-bold bg-gradient-to-r from-gold-500 to-gold-600 text-navy-950 shadow-lg"
                 >
                   <PhoneCall className="w-4 h-4" />
-                  Free Consultation
                 </Link>
               </div>
             </div>

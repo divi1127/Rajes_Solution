@@ -89,9 +89,7 @@ export default function ERPProductDetail() {
   const HeroIcon = iconMap[product.icon] || Cpu;
 
   return (
-    <div className="py-8 bg-navy-50/20 dark:bg-navy-950/10">
-      
-      {/* Back button */}
+    <div className="pt-24 py-8 bg-navy-50/20 dark:bg-navy-950/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
         <Link 
           to="/erp-solutions" 

@@ -27,7 +27,7 @@ export default function MainLayout({ children }) {
       <Navbar />
 
       {/* Page Content wrapped in Framer Motion transition animation */}
-      <main className="flex-grow pt-24 z-10 relative">
+      <main className="flex-grow z-10 relative">
         <AnimatePresence mode="wait">
           <motion.div
             key={pathname}

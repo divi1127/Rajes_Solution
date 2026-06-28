@@ -150,11 +150,11 @@ export default function ERPSolutions() {
                 </div>
               </div>
             </div>
-            <div className="lg:w-1/2">
+            <div className="lg:w-1/2 relative overflow-hidden rounded-3xl shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1551288049-bbbda5366392?q=80&w=2070&auto=format&fit=crop" 
-                alt="Data Analytics" 
-                className="rounded-3xl shadow-2xl"
+                src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=2076&auto=format&fit=crop" 
+                alt="Digital Transformation" 
+                className="w-full h-full object-cover"
               />
             </div>
           </div>

@@ -27,7 +27,7 @@ export default function Blog() {
     : blogPosts.filter(post => post.category === selectedCategory || post.subCategory === selectedCategory);
 
   return (
-    <div className="py-12 bg-navy-50/20 dark:bg-navy-950/20">
+    <div className="pt-24 py-12 bg-navy-50/20 dark:bg-navy-950/20">
       
       {readingPost ? (
         /* Blog Reader View */

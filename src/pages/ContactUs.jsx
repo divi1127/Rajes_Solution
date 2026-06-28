@@ -7,7 +7,7 @@ export default function ContactUs() {
     name: '',
     email: '',
     phone: '',
-    service: 'erp',
+    service: 'ERP Implementation',
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
@@ -19,8 +19,10 @@ export default function ContactUs() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const waText = encodeURIComponent(`Hello Rajes Solutions,\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nService: ${formData.service}\nMessage: ${formData.message}`);
+    window.open(`https://wa.me/918825733129?text=${waText}`, '_blank');
     setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 5000);
+    setTimeout(() => setSubmitted(false), 4000);
   };
 
   return (
@@ -85,10 +87,8 @@ export default function ContactUs() {
                   </div>
                   <div>
                     <h4 className="font-bold text-navy-500 uppercase tracking-widest text-[10px] mb-2">Call Us</h4>
-                    <p className="text-navy-800 dark:text-navy-200 font-bold">
-                      +91 88257 33129<br />
-                      +91 94437 25515
-                    </p>
+                    <a href="tel:+918825733129" className="block text-navy-800 dark:text-navy-200 font-bold hover:text-gold-500 transition-colors">+91 88257 33129</a>
+                    <a href="tel:+918825709105" className="block text-navy-800 dark:text-navy-200 font-bold hover:text-gold-500 transition-colors">+91 88257 09105</a>
                   </div>
                 </div>
 
@@ -98,10 +98,8 @@ export default function ContactUs() {
                   </div>
                   <div>
                     <h4 className="font-bold text-navy-500 uppercase tracking-widest text-[10px] mb-2">Email</h4>
-                    <p className="text-navy-800 dark:text-navy-200 font-bold">
-                      rsrajesh99@gmail.com<br />
-                      info@rajessolutions.com
-                    </p>
+                    <a href="mailto:saravanan.soundararajan@rajessolutions.com" className="block text-navy-800 dark:text-navy-200 font-bold hover:text-gold-500 transition-colors break-all">saravanan.soundararajan@rajessolutions.com</a>
+                    <a href="mailto:sundareswaran.soundararajan@rajessolutions.com" className="block text-navy-800 dark:text-navy-200 font-bold hover:text-gold-500 transition-colors break-all">sundareswaran.soundararajan@rajessolutions.com</a>
                   </div>
                 </div>
 
@@ -111,7 +109,7 @@ export default function ContactUs() {
                   </div>
                   <div>
                     <h4 className="font-bold text-navy-500 uppercase tracking-widest text-[10px] mb-2">Live Chat</h4>
-                    <a href="https://wa.me/919443725515" target="_blank" rel="noopener noreferrer" className="text-emerald-600 dark:text-emerald-400 font-black flex items-center gap-2 hover:gap-3 transition-all">
+                    <a href="https://wa.me/918825733129" target="_blank" rel="noopener noreferrer" className="text-emerald-600 dark:text-emerald-400 font-black flex items-center gap-2 hover:gap-3 transition-all">
                       WhatsApp Now <ArrowRight className="w-4 h-4" />
                     </a>
                   </div>
@@ -160,6 +158,8 @@ export default function ContactUs() {
                       <input 
                         type="text" 
                         required
+                        value={formData.name}
+                        onChange={e => setFormData(p => ({...p, name: e.target.value}))}
                         className="w-full px-6 py-4 rounded-2xl bg-navy-50 dark:bg-navy-950 border border-navy-100 dark:border-navy-800 focus:border-gold-500 focus:outline-none transition-all font-bold text-navy-900 dark:text-white"
                         placeholder="John Doe"
                       />
@@ -169,6 +169,8 @@ export default function ContactUs() {
                       <input 
                         type="email" 
                         required
+                        value={formData.email}
+                        onChange={e => setFormData(p => ({...p, email: e.target.value}))}
                         className="w-full px-6 py-4 rounded-2xl bg-navy-50 dark:bg-navy-950 border border-navy-100 dark:border-navy-800 focus:border-gold-500 focus:outline-none transition-all font-bold text-navy-900 dark:text-white"
                         placeholder="john@enterprise.com"
                       />
@@ -181,13 +183,18 @@ export default function ContactUs() {
                       <input 
                         type="tel" 
                         required
+                        value={formData.phone}
+                        onChange={e => setFormData(p => ({...p, phone: e.target.value}))}
                         className="w-full px-6 py-4 rounded-2xl bg-navy-50 dark:bg-navy-950 border border-navy-100 dark:border-navy-800 focus:border-gold-500 focus:outline-none transition-all font-bold text-navy-900 dark:text-white"
                         placeholder="+91 88257 33129"
                       />
                     </div>
                     <div className="space-y-2">
                       <label className="text-[10px] font-black uppercase tracking-[0.2em] text-navy-400 dark:text-navy-500 ml-1">Service Interest</label>
-                      <select className="w-full px-6 py-4 rounded-2xl bg-navy-50 dark:bg-navy-950 border border-navy-100 dark:border-navy-800 focus:border-gold-500 focus:outline-none transition-all font-bold text-navy-900 dark:text-white appearance-none">
+                      <select
+                        value={formData.service}
+                        onChange={e => setFormData(p => ({...p, service: e.target.value}))}
+                        className="w-full px-6 py-4 rounded-2xl bg-navy-50 dark:bg-navy-950 border border-navy-100 dark:border-navy-800 focus:border-gold-500 focus:outline-none transition-all font-bold text-navy-900 dark:text-white appearance-none">
                         <option>ERP Implementation</option>
                         <option>Remote DBA Support</option>
                         <option>App Development</option>
@@ -202,6 +209,8 @@ export default function ContactUs() {
                     <textarea 
                       rows="6"
                       required
+                      value={formData.message}
+                      onChange={e => setFormData(p => ({...p, message: e.target.value}))}
                       className="w-full px-6 py-4 rounded-2xl bg-navy-50 dark:bg-navy-950 border border-navy-100 dark:border-navy-800 focus:border-gold-500 focus:outline-none transition-all font-bold text-navy-900 dark:text-white"
                       placeholder="How can we help your business?"
                     ></textarea>
