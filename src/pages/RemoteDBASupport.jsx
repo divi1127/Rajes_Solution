@@ -63,7 +63,7 @@ export default function RemoteDBASupport() {
       <section className="relative h-screen flex items-center justify-center px-4 overflow-hidden bg-navy-900">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1544380903-5961db1b7ebd?q=80&w=2070&auto=format&fit=crop" 
+            src="https://i.pinimg.com/736x/85/86/0f/85860fde4f4f58ad06c5b590e648e524.jpg" 
             alt="Database Server" 
             className="w-full h-full object-cover opacity-20"
           />

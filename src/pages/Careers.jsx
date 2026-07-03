@@ -21,9 +21,8 @@ export default function Careers() {
 
   const handleApplySubmit = (e) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`Job Application - ${applyJob}`);
-    const body = encodeURIComponent(`Position: ${applyJob}\nName: ${applyForm.name}\nEmail: ${applyForm.email}\nPhone: ${applyForm.phone}\nResume: ${applyForm.resumeName || 'See attachment'}\n\nCover Note:\n${applyForm.message}\n\nPlease find my resume attached.`);
-    window.location.href = `mailto:saravanan.soundararajan@rajessolutions.com?subject=${subject}&body=${body}`;
+    const text = encodeURIComponent(`Position: ${applyJob}\nName: ${applyForm.name}\nEmail: ${applyForm.email}\nPhone: ${applyForm.phone}\nResume: ${applyForm.resumeName || 'See attachment'}\n\nCover Note:\n${applyForm.message}\n\nPlease find my resume attached.`);
+    window.open(`https://wa.me/918825733129?text=${text}`, '_blank');
     setTimeout(() => {
       setApplyJob(null);
       setApplyForm({ name: '', email: '', phone: '', message: '', resumeName: '' });
@@ -197,9 +196,11 @@ export default function Careers() {
             We are always looking for exceptional talent in database engineering and enterprise software development. Send us your resume for future considerations.
           </p>
           <a
-            href="mailto:saravanan.soundararajan@rajessolutions.com?subject=Resume%20Submission%20-%20Rajes%20Solutions&body=Hi%20Rajes%20Solutions%20Team,%0A%0APlease%20find%20my%20resume%20attached%20for%20your%20consideration.%0A%0AName:%0APhone:%0ASpecialty:%0A%0AThank%20you."
+            href="https://wa.me/918825733129?text=Hi%20Rajes%20Solutions%20Team,%0A%0APlease%20find%20my%20resume%20attached%20for%20your%20consideration.%0A%0AName:%0APhone:%0ASpecialty:%0A%0AThank%20you."
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-10 py-5 rounded-2xl bg-gradient-to-r from-gold-500 to-gold-600 text-navy-950 font-black text-xl hover:shadow-gold-500/20 transition-all">
-            Email Your Resume <ArrowRight className="w-5 h-5" />
+            WhatsApp Your Resume <ArrowRight className="w-5 h-5" />
           </a>
         </div>
       </section>
@@ -251,7 +252,7 @@ export default function Careers() {
                 {applyForm.resumeName && (
                   <p className="text-[10px] text-emerald-500 font-bold mt-1 ml-1">✓ {applyForm.resumeName} selected</p>
                 )}
-                <p className="text-[10px] text-navy-400 mt-1 ml-1">Attach the file manually in the email compose window that opens.</p>
+                <p className="text-[10px] text-navy-400 mt-1 ml-1">You can attach the file in the WhatsApp chat that opens.</p>
               </div>
               <button type="submit" className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 text-navy-950 font-black transition-all hover:from-gold-400 hover:to-gold-500">
                 <Send className="w-4 h-4" /> Submit Application

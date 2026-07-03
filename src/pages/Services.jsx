@@ -187,11 +187,11 @@ export default function Services() {
       <section className="relative h-screen flex items-center justify-center px-4 overflow-hidden bg-navy-900">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop" 
+            src="https://i.pinimg.com/1200x/78/6d/47/786d47ecd4414e4c5617394a25de2e67.jpg" 
             alt="Services Hero" 
             className="w-full h-full object-cover opacity-30"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-navy-950/30 via-navy-950/60 to-navy-950/90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy-950/5 via-navy-950/15 to-navy-950/30" />
         </div>
         
         <motion.div

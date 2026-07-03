@@ -35,11 +35,11 @@ export default function AboutUs() {
       <section className="relative h-screen flex items-center justify-center px-4 overflow-hidden bg-navy-900">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" 
-            alt="Team Working" 
+            src="https://i.pinimg.com/vwebpf/1200x/34/ce/d2/34ced28077ef3b3c8f4fd932a9b422eb.webp" 
+            alt="About Hero" 
             className="w-full h-full object-cover opacity-20"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-navy-950/30 via-navy-950/60 to-navy-950/90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy-950/5 via-navy-950/15 to-navy-950/30" />
         </div>
         
         <motion.div
@@ -100,7 +100,7 @@ export default function AboutUs() {
             <h3 className="text-3xl sm:text-5xl font-black text-navy-900 dark:text-white mb-8 leading-tight">Expertise That Matters</h3>
             <div className="space-y-6 text-navy-600 dark:text-navy-300 text-lg leading-relaxed">
               <p>
-                Founded and led by <strong>S. Rajesh</strong>, an industry veteran with 26 years of hands-on experience in complex production environments, Rajes Solutions operates at the intersection of application performance and database stability.
+                Founded and led by <strong>Saravanan Soundararajan</strong>, an industry veteran with 26 years of hands-on experience in complex production environments, Rajes Solutions operates at the intersection of application performance and database stability.
               </p>
               <p>
                 Our philosophy is simple: Enterprise systems must be built for reliability first. We specialize in custom ERP modules and database architectures that don't just work—they excel under heavy load, ensuring your business stays profitable and operational 24/7.

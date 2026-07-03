@@ -80,8 +80,8 @@ export default function Home() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop" 
-            alt="CRT Monitor Display" 
+            src="https://i.pinimg.com/736x/cd/32/4a/cd324ac33b3f38cf00bf5fd40362226d.jpg" 
+            alt="Hero Background" 
             className="w-full h-full object-cover opacity-30"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-navy-950/30 via-navy-950/60 to-navy-950/90" />

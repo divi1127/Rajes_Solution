@@ -70,7 +70,7 @@ export default function CaseStudies() {
       <section className="relative h-screen flex items-center justify-center px-4 overflow-hidden bg-navy-900">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop" 
+            src="https://i.pinimg.com/736x/0b/87/76/0b87760698a89386f7d39c5fde12fcb1.jpg" 
             alt="Business Success" 
             className="w-full h-full object-cover opacity-20"
           />

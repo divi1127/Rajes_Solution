@@ -64,7 +64,7 @@ export default function Resources() {
       <section className="relative h-screen flex items-center justify-center px-4 overflow-hidden bg-navy-900">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1510511459019-5dee997dd2cd?q=80&w=2070&auto=format&fit=crop" 
+            src="https://i.pinimg.com/1200x/71/8a/99/718a990564fec213e5c80fddc345ef92.jpg" 
             alt="Knowledge Hub" 
             className="w-full h-full object-cover opacity-20"
           />
