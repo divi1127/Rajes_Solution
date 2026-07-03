@@ -18,6 +18,8 @@ import Technologies from './pages/Technologies';
 import CaseStudies from './pages/CaseStudies';
 import Resources from './pages/Resources';
 import Careers from './pages/Careers';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsConditions from './pages/TermsConditions';
 
 export default function App() {
   return (
@@ -39,6 +41,8 @@ export default function App() {
             <Route path="/resources" element={<Resources />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/contact-us" element={<ContactUs />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-conditions" element={<TermsConditions />} />
             
             {/* Fallback route redirection */}
             <Route path="*" element={<Home />} />

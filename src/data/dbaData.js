@@ -4,11 +4,11 @@ export const dbaServices = [
     name: "SQL Server Administration",
     tagline: "End-to-end management of your enterprise SQL infrastructure.",
     shortDesc: "Dedicated database administration services keeping your Microsoft SQL Server environments stable, healthy, and highly available.",
-    longDesc: "Rajes Solutions offers comprehensive SQL Server Administration services tailored to maintain your mission-critical setups. Our team handles everything from standard installations and configuration adjustments to complex cluster management, AlwaysOn Availability Group configurations, and routine patch applications. We operate as an extension of your IT division, offering 24/7 reliability and proactive adjustments.",
+    longDesc: "Raje's Solutions offers comprehensive SQL Server Administration services tailored to maintain your mission-critical setups. Our team handles everything from standard installations and configuration adjustments to complex cluster management, AlwaysOn Availability Group configurations, and routine patch applications. We operate as an extension of your IT division, offering 24/7 reliability and proactive adjustments.",
     icon: "Database",
     themeColor: "from-blue-700 to-indigo-800",
     seo: {
-      title: "SQL Server Database Administration | Remote DBA | Rajes Solutions",
+      title: "SQL Server Database Administration | Remote DBA | Raje's Solutions",
       description: "Get professional, 24/7 Remote SQL Server DBA Support. We manage clustering, AlwaysOn, patching, user access, and system health checks.",
       keywords: "SQL Server DBA, Remote DBA support, database administration, SQL Server clustering, AlwaysOn"
     },
@@ -52,11 +52,11 @@ export const dbaServices = [
     name: "Performance Tuning",
     tagline: "Accelerate slow queries and unlock database throughput.",
     shortDesc: "Comprehensive database optimization, query tuning, index restructuring, and resource allocation to eliminate bottleneck points.",
-    longDesc: "Slow database response times drag down your entire web application. Rajes Solutions specializes in deep-dive SQL performance tuning. We look beyond basic settings to inspect query execution plans, trace deadlocks, rebuild fragmented indexes, and optimize tempdb usage. We squeeze maximum performance out of your existing hardware, saving thousands in cloud scaling costs.",
+    longDesc: "Slow database response times drag down your entire web application. Raje's Solutions specializes in deep-dive SQL performance tuning. We look beyond basic settings to inspect query execution plans, trace deadlocks, rebuild fragmented indexes, and optimize tempdb usage. We squeeze maximum performance out of your existing hardware, saving thousands in cloud scaling costs.",
     icon: "Zap",
     themeColor: "from-amber-500 to-red-600",
     seo: {
-      title: "SQL Performance Tuning & Optimization | Rajes Solutions",
+      title: "SQL Performance Tuning & Optimization | Raje's Solutions",
       description: "Fix slow SQL queries, optimize execution plans, rebuild indexes, and eliminate database bottlenecks with our DBA tuning services.",
       keywords: "SQL tuning, query optimization, database performance tuning, index fragmentation, fix slow SQL"
     },
@@ -100,11 +100,11 @@ export const dbaServices = [
     name: "Backup & Recovery",
     tagline: "Protect your enterprise data with resilient recovery plans.",
     shortDesc: "Design, implementation, and regular verification of automated backup routines to guarantee zero data loss.",
-    longDesc: "A backup plan is only as good as its last successful restore test. Rajes Solutions provides complete backup and recovery management. We design customized backup schedules (Full, Differential, Transaction Log) matching your business Recovery Point Objective (RPO) and Recovery Time Objective (RTO). Most importantly, we run automated restore tests to verify backups before a disaster occurs.",
+    longDesc: "A backup plan is only as good as its last successful restore test. Raje's Solutions provides complete backup and recovery management. We design customized backup schedules (Full, Differential, Transaction Log) matching your business Recovery Point Objective (RPO) and Recovery Time Objective (RTO). Most importantly, we run automated restore tests to verify backups before a disaster occurs.",
     icon: "ShieldCheck",
     themeColor: "from-emerald-600 to-blue-700",
     seo: {
-      title: "SQL Backup & Disaster Recovery Solutions | Rajes Solutions",
+      title: "SQL Backup & Disaster Recovery Solutions | Raje's Solutions",
       description: "Guarantee business continuity with automated database backups, log shipping, remote storage sync, and recovery verification.",
       keywords: "database backup, SQL disaster recovery, RPO RTO, log shipping, backup restoration test"
     },
@@ -148,11 +148,11 @@ export const dbaServices = [
     name: "Database Monitoring",
     tagline: "Proactive alerting and health dashboards for zero downtime.",
     shortDesc: "24/7 performance tracking, disk space warnings, CPU utilization tracking, and immediate anomaly notifications.",
-    longDesc: "Don't wait for your users to tell you the application is slow. Rajes Solutions installs enterprise-grade monitoring systems that check database metrics in real-time. We keep track of database size growth, transaction rates, blocking chains, and disk space limits, resolving small issues before they scale into severe downtime events.",
+    longDesc: "Don't wait for your users to tell you the application is slow. Raje's Solutions installs enterprise-grade monitoring systems that check database metrics in real-time. We keep track of database size growth, transaction rates, blocking chains, and disk space limits, resolving small issues before they scale into severe downtime events.",
     icon: "Activity",
     themeColor: "from-sky-500 to-indigo-600",
     seo: {
-      title: "24/7 SQL Database Monitoring & Alerting | Rajes Solutions",
+      title: "24/7 SQL Database Monitoring & Alerting | Raje's Solutions",
       description: "Monitor SQL Server round-the-clock. Track blocking queries, disk alerts, memory stress, and error logs with real-time DBA alerting.",
       keywords: "database monitoring, SQL Server alert, disk space monitoring, server telemetry, 24/7 DBA"
     },
@@ -196,11 +196,11 @@ export const dbaServices = [
     name: "Migration Support",
     tagline: "Seamless transitions to cloud databases and modern versions.",
     shortDesc: "Risk-free database migration plans, cross-platform transitions, and cloud migrations with near-zero business downtime.",
-    longDesc: "Migrating databases presents significant risks of data loss or extended outages. Rajes Solutions offers expert migration assistance. Whether you are moving SQL Server to Azure, migrating MySQL to AWS, or upgrading legacy 2008 databases to SQL Server 2022, we plan and validate every step, running parallel validations to ensure a smooth transition.",
+    longDesc: "Migrating databases presents significant risks of data loss or extended outages. Raje's Solutions offers expert migration assistance. Whether you are moving SQL Server to Azure, migrating MySQL to AWS, or upgrading legacy 2008 databases to SQL Server 2022, we plan and validate every step, running parallel validations to ensure a smooth transition.",
     icon: "RefreshCw",
     themeColor: "from-violet-600 to-fuchsia-600",
     seo: {
-      title: "SQL Database Migration Services | On-Premises to Cloud | Rajes Solutions",
+      title: "SQL Database Migration Services | On-Premises to Cloud | Raje's Solutions",
       description: "Migrate SQL databases safely. legacy upgrades, SQL Server to Azure SQL, AWS migration, and cross-platform database transfers.",
       keywords: "database migration, cloud migration, legacy SQL upgrade, database transfer, SQL Server to Azure"
     },
@@ -244,11 +244,11 @@ export const dbaServices = [
     name: "Security Management",
     tagline: "Lock down your data assets and maintain compliance.",
     shortDesc: "Implement advanced database hardening, transparent data encryption (TDE), access auditing, and regulatory compliance.",
-    longDesc: "Database engines are prime targets for cyberattacks. Rajes Solutions Security Management protects your database layer. We implement strict security configurations: disabling insecure protocols, setting up Transparent Data Encryption (TDE), auditing data updates, masking sensitive fields, and protecting against SQL injections.",
+    longDesc: "Database engines are prime targets for cyberattacks. Raje's Solutions Security Management protects your database layer. We implement strict security configurations: disabling insecure protocols, setting up Transparent Data Encryption (TDE), auditing data updates, masking sensitive fields, and protecting against SQL injections.",
     icon: "ShieldAlert",
     themeColor: "from-rose-700 to-navy-900",
     seo: {
-      title: "SQL Database Security & Hardening | Rajes Solutions",
+      title: "SQL Database Security & Hardening | Raje's Solutions",
       description: "Secure your database assets. We configure Transparent Data Encryption (TDE), audit access logs, mask sensitive data, and enforce SSL.",
       keywords: "database security, SQL hardening, TDE encryption, database audit, HIPAA GDPR compliance"
     },

@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 export default function Technologies() {
   useEffect(() => {
-    document.title = "Technologies | Our Enterprise Tech Stack | Rajes Solutions";
+    document.title = "Technologies | Our Enterprise Tech Stack | Raje's Solutions";
     window.scrollTo(0, 0);
   }, []);
 

@@ -13,14 +13,14 @@ export default function ContactUs() {
   const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
-    document.title = "Contact Us | Enterprise IT Partner | Rajes Solutions";
+    document.title = "Contact Us | Enterprise IT Partner | Raje's Solutions";
     window.scrollTo(0, 0);
   }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const waText = encodeURIComponent(`Hello Rajes Solutions,\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nService: ${formData.service}\nMessage: ${formData.message}`);
-    window.open(`https://wa.me/918825733129?text=${waText}`, '_blank');
+    const waText = encodeURIComponent(`Hello Raje's Solutions,\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nService: ${formData.service}\nMessage: ${formData.message}`);
+    window.open(`https://wa.me/918825709105?text=${waText}`, '_blank');
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 4000);
   };
@@ -74,9 +74,9 @@ export default function ContactUs() {
                   <div>
                     <h4 className="font-bold text-navy-500 uppercase tracking-widest text-[10px] mb-2">Location</h4>
                     <p className="text-navy-800 dark:text-navy-200 font-bold leading-relaxed">
-                      12, P.S. COMPLEX, TRICHY MAIN ROAD,<br />
-                      OPP. GOVT. MEDICAL COLLEGE,<br />
-                      NAMAKKAL - 637 001. TAMILNADU, INDIA.
+                      Shirdi Sai Baba Temple<br />
+                      TS NO 1045 North Fourth Street<br />
+                      Pudukkottai - 622001.
                     </p>
                   </div>
                 </div>
@@ -87,7 +87,7 @@ export default function ContactUs() {
                   </div>
                   <div>
                     <h4 className="font-bold text-navy-500 uppercase tracking-widest text-[10px] mb-2">Call Us</h4>
-                    <a href="tel:+918825733129" className="block text-navy-800 dark:text-navy-200 font-bold hover:text-gold-500 transition-colors">+91 88257 33129</a>
+                    <a href="tel:+919884498549" className="block text-navy-800 dark:text-navy-200 font-bold hover:text-gold-500 transition-colors">+91 98844 98549</a>
                     <a href="tel:+918825709105" className="block text-navy-800 dark:text-navy-200 font-bold hover:text-gold-500 transition-colors">+91 88257 09105</a>
                   </div>
                 </div>
@@ -109,7 +109,7 @@ export default function ContactUs() {
                   </div>
                   <div>
                     <h4 className="font-bold text-navy-500 uppercase tracking-widest text-[10px] mb-2">Live Chat</h4>
-                    <a href="https://wa.me/918825733129" target="_blank" rel="noopener noreferrer" className="text-emerald-600 dark:text-emerald-400 font-black flex items-center gap-2 hover:gap-3 transition-all">
+                    <a href="https://wa.me/918825709105" target="_blank" rel="noopener noreferrer" className="text-emerald-600 dark:text-emerald-400 font-black flex items-center gap-2 hover:gap-3 transition-all">
                       WhatsApp Now <ArrowRight className="w-4 h-4" />
                     </a>
                   </div>
@@ -186,7 +186,7 @@ export default function ContactUs() {
                         value={formData.phone}
                         onChange={e => setFormData(p => ({...p, phone: e.target.value}))}
                         className="w-full px-6 py-4 rounded-2xl bg-navy-50 dark:bg-navy-950 border border-navy-100 dark:border-navy-800 focus:border-gold-500 focus:outline-none transition-all font-bold text-navy-900 dark:text-white"
-                        placeholder="+91 88257 33129"
+                        placeholder="+91 98844 98549"
                       />
                     </div>
                     <div className="space-y-2">
@@ -229,11 +229,16 @@ export default function ContactUs() {
         </div>
       </section>
 
-      {/* Map Section Placeholder */}
-      <section className="h-[400px] w-full bg-navy-100 dark:bg-navy-900 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-50 dark:opacity-30 grayscale invert">
+      {/* Map Section */}
+      <a
+        href="https://www.google.com/maps/place/10%C2%B023'19.3%22N+78%C2%B049'19.9%22E/@10.3887005,78.8196134,816m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d10.3887005!4d78.8221883?hl=en&entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block h-[400px] w-full bg-navy-100 dark:bg-navy-900 relative overflow-hidden"
+      >
+        <div className="absolute inset-0 pointer-events-none">
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.147346853757!2d78.161048674911!3d11.2223849889608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bab070000000001%3A0x0!2zMTHCsDEzJzIwLjYiTiA3OMKwMDknNDguNiJF!5e0!3m2!1sen!2sin!4v1718870000000!5m2!1sen!2sin" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.147346853757!2d78.8221883!3d10.3887005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDIzJzE5LjMiTiA3OMKwNDknMTkuOSJF!5e0!3m2!1sen!2sin!4v1" 
             width="100%" 
             height="100%" 
             style={{ border: 0 }} 
@@ -242,7 +247,7 @@ export default function ContactUs() {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-      </section>
+      </a>
 
     </div>
   );

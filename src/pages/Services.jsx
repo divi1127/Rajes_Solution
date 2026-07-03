@@ -13,7 +13,7 @@ import databaseImg from '../assets/services/database.png';
 
 export default function Services() {
   useEffect(() => {
-    document.title = "Our Services | Enterprise Technology Solutions | Rajes Solutions";
+    document.title = "Our Services | Enterprise Technology Solutions | Raje's Solutions";
     window.scrollTo(0, 0);
   }, []);
 

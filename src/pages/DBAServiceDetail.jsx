@@ -21,7 +21,7 @@ export default function DBAServiceDetail() {
     } else {
       setService(found);
       // SEO
-      document.title = found.seo.title || `${found.name} | Rajes Solutions`;
+      document.title = found.seo.title || `${found.name} | Raje's Solutions`;
       const metaDesc = document.querySelector('meta[name="description"]');
       if (metaDesc) {
         metaDesc.setAttribute("content", found.seo.description);

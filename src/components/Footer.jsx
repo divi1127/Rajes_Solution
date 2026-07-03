@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Mail, Phone, MapPin, Send, CheckCircle2, 
-  MessageSquare, Linkedin, Twitter, ArrowRight,
+  MessageSquare, ArrowRight,
   Database, Layout, Code, Brain, Cpu, Server
 } from 'lucide-react';
 
@@ -58,16 +58,14 @@ export default function Footer() {
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16">
           
           {/* Brand Info */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-5">
             <Link to="/" className="flex items-center gap-3 mb-8 group">
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center shadow-xl shadow-gold-500/10 group-hover:scale-105 transition-transform">
-                <Database className="w-6 h-6 text-navy-950" />
-              </div>
+              <img src="/logo1.png" alt="Raje's Solutions" className="w-28 h-28 object-contain" />
               <span className="font-sans font-black text-2xl tracking-tighter text-white">
-                RAJES <span className="text-gold-500">SOLUTIONS</span>
+                RAJE'S <span className="text-gold-500">SOLUTIONS</span>
               </span>
             </Link>
             <p className="text-navy-400 text-lg leading-relaxed mb-8 max-w-sm">
@@ -75,9 +73,7 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               {[
-                { icon: Linkedin, href: "#" },
-                { icon: Twitter, href: "#" },
-                { icon: MessageSquare, href: "https://wa.me/918825733129" }
+                { icon: MessageSquare, href: "https://wa.me/918825709105" }
               ].map((social, i) => (
                 <a 
                   key={i}
@@ -92,7 +88,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           {footerLinks.map((section, idx) => (
-            <div key={idx}>
+            <div key={idx} className={idx === 0 ? 'lg:col-span-3' : 'lg:col-span-2'}>
               <h3 className="font-bold text-white text-lg mb-8 relative inline-block">
                 {section.title}
                 <span className="absolute -bottom-2 left-0 w-8 h-1 bg-gold-500 rounded-full" />
@@ -115,22 +111,21 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-navy-900 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex flex-col md:flex-row items-center gap-6 text-sm text-navy-500">
-            <p>&copy; {currentYear} Rajes Solutions. All rights reserved.</p>
+            <p>&copy; {currentYear} Raje's Solutions. All rights reserved.</p>
             <div className="flex items-center gap-4 border-l border-navy-900 pl-6 hidden md:flex">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-gold-500/50" />
                 Global Support
               </div>
               <div className="flex flex-col text-xs">
-                <span>+91 88257 33129</span>
-                <span>+91 88257 09105</span>
+                <span>+91 98844 98549</span>
               </div>
             </div>
           </div>
           
           <div className="flex items-center gap-8 text-xs font-bold tracking-widest uppercase text-navy-600">
-            <Link to="#" className="hover:text-gold-500 transition-colors">Privacy</Link>
-            <Link to="#" className="hover:text-gold-500 transition-colors">Terms</Link>
+            <Link to="/privacy-policy" className="hover:text-gold-500 transition-colors">Privacy</Link>
+            <Link to="/terms-conditions" className="hover:text-gold-500 transition-colors">Terms</Link>
             <Link to="/contact-us" className="text-gold-500 hover:text-gold-400 transition-colors flex items-center gap-1">
               Support <ArrowRight className="w-3 h-3" />
             </Link>

@@ -27,7 +27,7 @@ export default function ERPProductDetail() {
     } else {
       setProduct(found);
       // SEO tags updates
-      document.title = found.seo.title || `${found.name} | Rajes Solutions`;
+      document.title = found.seo.title || `${found.name} | Raje's Solutions`;
       const metaDesc = document.querySelector('meta[name="description"]');
       if (metaDesc) {
         metaDesc.setAttribute("content", found.seo.description);

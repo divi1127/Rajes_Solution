@@ -15,9 +15,9 @@ export default function RequestModal({ isOpen, onClose, type = 'demo' }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const waText = encodeURIComponent(`Hello Rajes Solutions,\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nCompany: ${formData.company}\n${type === 'demo' ? 'Product' : 'Database'}: ${formData.product}\nMessage: ${formData.message}`);
-    window.open(`https://wa.me/918825733129?text=${waText}`, '_blank');
-    const subject = encodeURIComponent(`Rajes Solutions - ${type === 'demo' ? 'ERP Demo Request' : 'SQL Health Check'}`);
+    const waText = encodeURIComponent(`Hello Raje's Solutions,\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nCompany: ${formData.company}\n${type === 'demo' ? 'Product' : 'Database'}: ${formData.product}\nMessage: ${formData.message}`);
+    window.open(`https://wa.me/918825709105?text=${waText}`, '_blank');
+    const subject = encodeURIComponent(`Raje's Solutions - ${type === 'demo' ? 'ERP Demo Request' : 'SQL Health Check'}`);
     const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nCompany: ${formData.company}\n${type === 'demo' ? 'Product' : 'Database'}: ${formData.product}\nMessage: ${formData.message}`);
     setTimeout(() => {
       window.location.href = `mailto:saravanan.soundararajan@rajessolutions.com?subject=${subject}&body=${body}`;

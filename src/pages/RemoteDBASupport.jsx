@@ -12,7 +12,7 @@ export default function RemoteDBASupport() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    document.title = "24/7 Remote DBA Support | Sybase, SQL Server, Postgres | Rajes Solutions";
+    document.title = "24/7 Remote DBA Support | Sybase, SQL Server, Postgres | Raje's Solutions";
     window.scrollTo(0, 0);
   }, []);
 

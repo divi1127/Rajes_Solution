@@ -7,7 +7,7 @@ export default function Blog() {
   const [readingPost, setReadingPost] = useState(null);
 
   useEffect(() => {
-    document.title = "Technical Blog | SQL Server & ERP | Rajes Solutions";
+    document.title = "Technical Blog | SQL Server & ERP | Raje's Solutions";
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
       metaDesc.setAttribute("content", "Read our technical articles written by certified DBAs. Get tips on SQL Server query tuning, index optimization, ransomware defense, and custom ERP software.");

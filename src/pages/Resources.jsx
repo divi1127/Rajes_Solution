@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 export default function Resources() {
   useEffect(() => {
-    document.title = "Resources | Enterprise IT Insights | Rajes Solutions";
+    document.title = "Resources | Enterprise IT Insights | Raje's Solutions";
     window.scrollTo(0, 0);
   }, []);
 

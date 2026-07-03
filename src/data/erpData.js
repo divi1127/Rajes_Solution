@@ -4,11 +4,11 @@ export const erpProducts = [
     name: "Workshop ERP",
     tagline: "Automate repairs, billing, inventory, and customer communications.",
     shortDesc: "Comprehensive garage and service center management software designed to scale operations and boost profitability.",
-    longDesc: "Rajes Solutions Workshop ERP is the ultimate digital solution for automotive workshops, detailing centers, and heavy equipment garages. Streamline your service advisors' workflow, digitize job cards, monitor mechanic productivity, and automate spare parts inventory tracking. With built-in customer WhatsApp alerts for job completion and seamless billing, running a workshop has never been more efficient.",
+    longDesc: "Raje's Solutions Workshop ERP is the ultimate digital solution for automotive workshops, detailing centers, and heavy equipment garages. Streamline your service advisors' workflow, digitize job cards, monitor mechanic productivity, and automate spare parts inventory tracking. With built-in customer WhatsApp alerts for job completion and seamless billing, running a workshop has never been more efficient.",
     icon: "Wrench",
     themeColor: "from-blue-600 to-cyan-500",
     seo: {
-      title: "Workshop ERP Software | Rajes Solutions",
+      title: "Workshop ERP Software | Raje's Solutions",
       description: "Optimize your garage operations with Workshop ERP. Streamline job cards, spare parts inventory, mechanics scheduling, billing, and customer notifications.",
       keywords: "workshop ERP, garage management software, auto repair software, billing, job card software"
     },
@@ -70,11 +70,11 @@ export const erpProducts = [
     name: "School ERP",
     tagline: "Empower educators, engage parents, and streamline administration.",
     shortDesc: "A complete school management system covering student lifecycles, fee management, online exams, and grading.",
-    longDesc: "Rajes Solutions School ERP bridges the gap between administrators, teachers, students, and parents. From student admissions and live attendance tracking to digital fee collection and report card generation, it handles every administrative task with ease. Provide parents with a dedicated portal for homework, timetables, and fee payments, while equipping teachers with digital gradebooks and planning utilities.",
+    longDesc: "Raje's Solutions School ERP bridges the gap between administrators, teachers, students, and parents. From student admissions and live attendance tracking to digital fee collection and report card generation, it handles every administrative task with ease. Provide parents with a dedicated portal for homework, timetables, and fee payments, while equipping teachers with digital gradebooks and planning utilities.",
     icon: "GraduationCap",
     themeColor: "from-purple-600 to-indigo-500",
     seo: {
-      title: "School ERP Software | Complete Campus Administration | Rajes Solutions",
+      title: "School ERP Software | Complete Campus Administration | Raje's Solutions",
       description: "Manage admissions, digital fee collection, online report cards, attendance, and parent communications with our premium School ERP.",
       keywords: "school ERP, school management system, student information system, online fees, parent portal"
     },
@@ -132,11 +132,11 @@ export const erpProducts = [
     name: "Payroll ERP",
     tagline: "Simplify salary processing, compliance, and tax declarations.",
     shortDesc: "Robust payroll software with biometric integration, statutory compliance (PF/ESI/TDS), and employee self-service.",
-    longDesc: "Rajes Solutions Payroll ERP takes the headache out of monthly payroll processing. Designed to comply fully with local statutory laws, the system calculates salary breakdowns, processes tax declarations, adjusts for unpaid leaves, and generates payslips. Integrate directly with biometric systems to pull attendance, and allow employees to request leaves, upload tax proofs, and view payslips online.",
+    longDesc: "Raje's Solutions Payroll ERP takes the headache out of monthly payroll processing. Designed to comply fully with local statutory laws, the system calculates salary breakdowns, processes tax declarations, adjusts for unpaid leaves, and generates payslips. Integrate directly with biometric systems to pull attendance, and allow employees to request leaves, upload tax proofs, and view payslips online.",
     icon: "Briefcase",
     themeColor: "from-emerald-600 to-teal-500",
     seo: {
-      title: "Payroll ERP & HR Management Software | Rajes Solutions",
+      title: "Payroll ERP & HR Management Software | Raje's Solutions",
       description: "Automate salary calculations, ESI, EPF, TDS deductions, and employee self-service. Biometric integration and custom payslips.",
       keywords: "payroll ERP, salary software, HR compliance, biometric attendance, tax declaration"
     },
@@ -194,11 +194,11 @@ export const erpProducts = [
     name: "Temple ERP",
     tagline: "Manage donations, pooja bookings, and trust accounts.",
     shortDesc: "Specialized ERP to streamline temple administrations, inventory of sacred items, and devotee relationships.",
-    longDesc: "Rajes Solutions Temple ERP is created to preserve and manage sacred institutional processes. It automates devotee registrations, allows online and counter-based Pooja/Vazhipadu bookings, tracks donation collections, and organizes the distribution of prasadam. With a fully integrated financial accounting ledger and dynamic auditing tools, it ensures complete financial transparency and accountability for temple trusts.",
+    longDesc: "Raje's Solutions Temple ERP is created to preserve and manage sacred institutional processes. It automates devotee registrations, allows online and counter-based Pooja/Vazhipadu bookings, tracks donation collections, and organizes the distribution of prasadam. With a fully integrated financial accounting ledger and dynamic auditing tools, it ensures complete financial transparency and accountability for temple trusts.",
     icon: "Sun",
     themeColor: "from-amber-600 to-orange-500",
     seo: {
-      title: "Temple ERP & Devotee Management System | Rajes Solutions",
+      title: "Temple ERP & Devotee Management System | Raje's Solutions",
       description: "Manage temple administration, online pooja bookings, donation receipts, accounting, and prasadam inventory.",
       keywords: "temple ERP, temple management software, pooja booking, donation accounting"
     },
@@ -256,11 +256,11 @@ export const erpProducts = [
     name: "Hospital ERP",
     tagline: "Enhance patient care and optimize clinical operations.",
     shortDesc: "Complete healthcare software featuring OPD/IPD tracking, electronic health records (EHR), billing, and laboratory modules.",
-    longDesc: "Rajes Solutions Hospital ERP (HMS) is built to improve administrative workflows and clinical precision. Starting from emergency admissions or outpatient queue management to bed assignments, clinical charting, and discharge plans, the ERP maintains seamless electronic health records. It bridges diagnostic labs, pharmacies, and billing desks, enabling quick updates and lowering patient wait times.",
+    longDesc: "Raje's Solutions Hospital ERP (HMS) is built to improve administrative workflows and clinical precision. Starting from emergency admissions or outpatient queue management to bed assignments, clinical charting, and discharge plans, the ERP maintains seamless electronic health records. It bridges diagnostic labs, pharmacies, and billing desks, enabling quick updates and lowering patient wait times.",
     icon: "HeartPulse",
     themeColor: "from-red-600 to-rose-500",
     seo: {
-      title: "Hospital Management ERP Software | Rajes Solutions",
+      title: "Hospital Management ERP Software | Raje's Solutions",
       description: "Integrated hospital management software featuring OPD prescriptions, IPD bed allocations, EHR, pharmacy billing, and lab results.",
       keywords: "hospital ERP, HMS, electronic health records, OPD billing, IPD management"
     },
@@ -318,11 +318,11 @@ export const erpProducts = [
     name: "Supermarket ERP",
     tagline: "Lightning-fast POS billing, inventory, and promotions.",
     shortDesc: "High-performance retail ERP with multi-counter POS billing, barcode integration, and purchase reorder planning.",
-    longDesc: "Rajes Solutions Supermarket ERP is optimized for high-volume retail environments. The Point of Sale (POS) screen works offline to ensure zero billing downtime during internet outages. Manage tens of thousands of SKUs, set up flexible discount schemas (like Buy-1-Get-1), track batch/expiry numbers for FMCG goods, and automate purchase order generation when items fall below safety limits.",
+    longDesc: "Raje's Solutions Supermarket ERP is optimized for high-volume retail environments. The Point of Sale (POS) screen works offline to ensure zero billing downtime during internet outages. Manage tens of thousands of SKUs, set up flexible discount schemas (like Buy-1-Get-1), track batch/expiry numbers for FMCG goods, and automate purchase order generation when items fall below safety limits.",
     icon: "ShoppingCart",
     themeColor: "from-teal-600 to-green-500",
     seo: {
-      title: "Supermarket ERP & POS Billing Software | Rajes Solutions",
+      title: "Supermarket ERP & POS Billing Software | Raje's Solutions",
       description: "Drive retail efficiency with our fast POS billing software, batch inventory tracking, FMCG expiry controls, and automated supplier reordering.",
       keywords: "supermarket ERP, retail POS software, grocery billing, barcode inventory, stock reorder"
     },
@@ -380,11 +380,11 @@ export const erpProducts = [
     name: "Manufacturing ERP",
     tagline: "Streamline raw materials, production lines, and quality audits.",
     shortDesc: "Complete manufacturing solution with Bill of Materials (BOM), work-in-progress (WIP) tracking, and cost estimations.",
-    longDesc: "Rajes Solutions Manufacturing ERP empowers factory floor managers to plan production runs with accuracy. Define complex multi-level Bill of Materials (BOM), track production progress through different stages of WIP, assess labor expenses, and enforce quality control audits. By linking production directly to customer sales orders and raw material inventory, you can optimize material resource planning (MRP).",
+    longDesc: "Raje's Solutions Manufacturing ERP empowers factory floor managers to plan production runs with accuracy. Define complex multi-level Bill of Materials (BOM), track production progress through different stages of WIP, assess labor expenses, and enforce quality control audits. By linking production directly to customer sales orders and raw material inventory, you can optimize material resource planning (MRP).",
     icon: "Settings",
     themeColor: "from-slate-700 to-indigo-600",
     seo: {
-      title: "Manufacturing ERP Software | Production & BOM | Rajes Solutions",
+      title: "Manufacturing ERP Software | Production & BOM | Raje's Solutions",
       description: "Maximize production throughput. Manage Bill of Materials (BOM), track WIP steps, allocate labor, and manage raw material orders.",
       keywords: "manufacturing ERP, BOM software, MRP software, production tracking, cost calculation"
     },
@@ -442,11 +442,11 @@ export const erpProducts = [
     name: "Textile ERP",
     tagline: "Manage looms, designs, yarn stocks, and dye cycles.",
     shortDesc: "Specialized textile software supporting color-size grids, loom production, dye recipes, and export order invoicing.",
-    longDesc: "Rajes Solutions Textile ERP is custom-designed for spinning mills, weaving units, garment exporters, and fabric wholesalers. Manage materials using unique multi-dimensional grids (Color-Size-Design). Track loom production, dye recipes, yarn shrinkage factors, and coordinate fabric processing stages. The built-in export documentation module simplifies shipping invoices, packing lists, and custom declarations.",
+    longDesc: "Raje's Solutions Textile ERP is custom-designed for spinning mills, weaving units, garment exporters, and fabric wholesalers. Manage materials using unique multi-dimensional grids (Color-Size-Design). Track loom production, dye recipes, yarn shrinkage factors, and coordinate fabric processing stages. The built-in export documentation module simplifies shipping invoices, packing lists, and custom declarations.",
     icon: "Scissors",
     themeColor: "from-sky-700 to-indigo-600",
     seo: {
-      title: "Textile & Garment Manufacturing ERP | Rajes Solutions",
+      title: "Textile & Garment Manufacturing ERP | Raje's Solutions",
       description: "Manage yarn stocks, looms, weaving schedules, color-size grids, dyeing, and international shipping documents in our Textile ERP.",
       keywords: "textile ERP, weaving software, garment ERP, dye house management, export documentation"
     },
@@ -504,11 +504,11 @@ export const erpProducts = [
     name: "Hotel ERP",
     tagline: "Manage reservations, front desk, and guest services seamlessly.",
     shortDesc: "Complete hospitality management software for hotels, resorts, and restaurants.",
-    longDesc: "Rajes Solutions Hotel ERP is a comprehensive hospitality management system designed to streamline front desk operations, room reservations, guest billing, and restaurant services. From booking to checkout, manage the entire guest journey with ease. Optimize room occupancy, manage housekeeping schedules, and integrate with online travel agents (OTAs) for real-time availability updates.",
+    longDesc: "Raje's Solutions Hotel ERP is a comprehensive hospitality management system designed to streamline front desk operations, room reservations, guest billing, and restaurant services. From booking to checkout, manage the entire guest journey with ease. Optimize room occupancy, manage housekeeping schedules, and integrate with online travel agents (OTAs) for real-time availability updates.",
     icon: "Bed",
     themeColor: "from-amber-600 to-orange-500",
     seo: {
-      title: "Hotel Management ERP Software | Rajes Solutions",
+      title: "Hotel Management ERP Software | Raje's Solutions",
       description: "Manage hotel rooms, reservations, guest billing, and restaurant POS with our integrated Hotel ERP system.",
       keywords: "hotel ERP, hotel management software, room booking, guest management, hospitality software"
     },

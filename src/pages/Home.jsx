@@ -50,13 +50,13 @@ export default function Home() {
 
   const testimonials = [
     {
-      quote: "Rajes Solutions transformed our workshop administration. Billing takes seconds and customers love the automatic status alerts.",
+      quote: "Raje's Solutions transformed our workshop administration. Billing takes seconds and customers love the automatic status alerts.",
       author: "Sundar Rajan",
       role: "Operations Director, TVS Motors Dealership",
       rating: 5
     },
     {
-      quote: "Our production database suffered from locking deadlocks. Rajes Solutions' performance tuning speeded up response rates immediately, saving our cloud scale budget.",
+      quote: "Our production database suffered from locking deadlocks. Raje's Solutions' performance tuning speeded up response rates immediately, saving our cloud scale budget.",
       author: "Meera Krishnan",
       role: "CTO, FinTech Services Ltd",
       rating: 5
@@ -105,7 +105,7 @@ export default function Home() {
             </h1>
 
             <p className="text-navy-100 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8">
-              Rajes Solutions delivers enterprise ERP systems, custom software solutions, and expert database administration services that help organizations automate operations, improve performance, and ensure high availability across cloud and on-premise environments.
+              Raje's Solutions delivers enterprise ERP systems, custom software solutions, and expert database administration services that help organizations automate operations, improve performance, and ensure high availability across cloud and on-premise environments.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">

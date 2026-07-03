@@ -6,7 +6,7 @@ export const blogPosts = [
     category: "Performance Tuning",
     subCategory: "SQL Server",
     date: "May 15, 2026",
-    author: "Rajes Solutions DBA Team",
+    author: "Raje's Solutions DBA Team",
     readTime: "8 min read",
     content: `
 ### What is Index Fragmentation?
@@ -47,14 +47,14 @@ Rather than executing manual commands, implement automated SQL Server maintenanc
     category: "ERP",
     subCategory: "Enterprise SaaS",
     date: "April 28, 2026",
-    author: "Rajes Solutions Consulting",
+    author: "Raje's Solutions Consulting",
     readTime: "6 min read",
     content: `
 ### The Trap of Generic Software
 Many growing companies make the mistake of choosing a one-size-fits-all software system. While off-the-shelf software is easy to purchase initially, it struggles to adapt as your workflows evolve. Legacy companies in specialized fields, such as textiles, automotive workshops, or temple trusts, have complex workflows that generic accounting software cannot handle, leading to manual Excel workarounds.
 
 ### Custom ERP: Tailored for Your Growth
-A tailored ERP system (like Rajes Solutions' Workshop ERP or Textile ERP) is structured around your specific workflows:
+A tailored ERP system (like Raje's Solutions' Workshop ERP or Textile ERP) is structured around your specific workflows:
 1.  **Eliminates Double Data Entry**: A single transaction automatically updates inventory, logs accounting entries, and triggers customer notifications.
 2.  **Implements Guardrails**: Ensures employees cannot bypass billing steps, run unauthorized discounts, or issue stock without proper records.
 3.  **Real-Time Dashboards**: Provides live metrics on machine utilization, inventory levels, and outstanding accounts receivable.
@@ -77,7 +77,7 @@ Transitioning to an ERP is an investment in your business's future. Start by map
     category: "Database Security",
     subCategory: "Security",
     date: "March 18, 2026",
-    author: "Rajes Solutions Security Team",
+    author: "Raje's Solutions Security Team",
     readTime: "10 min read",
     content: `
 ### The Threat: Ransomware Targeting Database Layers

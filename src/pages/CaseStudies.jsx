@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 
 export default function CaseStudies() {
   useEffect(() => {
-    document.title = "Case Studies | Enterprise Success Stories | Rajes Solutions";
+    document.title = "Case Studies | Enterprise Success Stories | Raje's Solutions";
     window.scrollTo(0, 0);
   }, []);
 

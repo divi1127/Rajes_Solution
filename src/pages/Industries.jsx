@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 
 export default function Industries() {
   useEffect(() => {
-    document.title = "Industries Served | Vertical Enterprise Expertise | Rajes Solutions";
+    document.title = "Industries Served | Vertical Enterprise Expertise | Raje's Solutions";
     window.scrollTo(0, 0);
   }, []);
 

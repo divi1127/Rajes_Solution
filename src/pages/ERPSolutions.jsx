@@ -12,7 +12,7 @@ export default function ERPSolutions() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    document.title = "Enterprise ERP Solutions | Specialized Industry Software | Rajes Solutions";
+    document.title = "Enterprise ERP Solutions | Specialized Industry Software | Raje's Solutions";
     window.scrollTo(0, 0);
   }, []);
 

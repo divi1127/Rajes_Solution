@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 export default function Careers() {
   useEffect(() => {
-    document.title = "Careers | Join Our Engineering Team | Rajes Solutions";
+    document.title = "Careers | Join Our Engineering Team | Raje's Solutions";
     window.scrollTo(0, 0);
   }, []);
 
@@ -22,7 +22,7 @@ export default function Careers() {
   const handleApplySubmit = (e) => {
     e.preventDefault();
     const text = encodeURIComponent(`Position: ${applyJob}\nName: ${applyForm.name}\nEmail: ${applyForm.email}\nPhone: ${applyForm.phone}\nResume: ${applyForm.resumeName || 'See attachment'}\n\nCover Note:\n${applyForm.message}\n\nPlease find my resume attached.`);
-    window.open(`https://wa.me/918825733129?text=${text}`, '_blank');
+    window.open(`https://wa.me/918825709105?text=${text}`, '_blank');
     setTimeout(() => {
       setApplyJob(null);
       setApplyForm({ name: '', email: '', phone: '', message: '', resumeName: '' });
@@ -196,7 +196,7 @@ export default function Careers() {
             We are always looking for exceptional talent in database engineering and enterprise software development. Send us your resume for future considerations.
           </p>
           <a
-            href="https://wa.me/918825733129?text=Hi%20Rajes%20Solutions%20Team,%0A%0APlease%20find%20my%20resume%20attached%20for%20your%20consideration.%0A%0AName:%0APhone:%0ASpecialty:%0A%0AThank%20you."
+            href="https://wa.me/918825709105?text=Hi%20Raje%27s%20Solutions%20Team,%0A%0APlease%20find%20my%20resume%20attached%20for%20your%20consideration.%0A%0AName:%0APhone:%0ASpecialty:%0A%0AThank%20you."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-10 py-5 rounded-2xl bg-gradient-to-r from-gold-500 to-gold-600 text-navy-950 font-black text-xl hover:shadow-gold-500/20 transition-all">

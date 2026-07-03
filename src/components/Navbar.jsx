@@ -63,11 +63,9 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link to="/" className="flex items-center gap-2 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center shadow-lg shadow-gold-500/20 group-hover:scale-105 transition-transform">
-                <Database className="w-5.5 h-5.5 text-navy-950 font-bold" />
-              </div>
+              <img src="/logo1.png" alt="Raje's Solutions" className="w-28 h-28 object-contain" />
               <span className="font-sans font-bold text-xl tracking-tight text-white/90 dark:text-white transition-colors">
-                RAJES <span className="text-gold-500 group-hover:text-gold-400 transition-colors">SOLUTIONS</span>
+                RAJE'S <span className="text-gold-500 group-hover:text-gold-400 transition-colors">SOLUTIONS</span>
               </span>
             </Link>
           </div>
