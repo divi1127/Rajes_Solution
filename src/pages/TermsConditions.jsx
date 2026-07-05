@@ -127,50 +127,95 @@ export default function TermsConditions() {
   }, []);
 
   return (
-    <div className="bg-white dark:bg-navy-950 min-h-screen text-navy-900 dark:text-white transition-colors">
-      <section className="relative py-20 px-4 overflow-hidden bg-navy-900">
+    <div className="bg-navy-50 dark:bg-navy-950 min-h-screen text-navy-900 dark:text-white transition-colors pb-24">
+      {/* Abstract Header */}
+      <section className="relative py-32 px-4 overflow-hidden bg-navy-900">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-navy-950/30 via-navy-950/60 to-navy-950/90" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(212,175,55,0.1),transparent)]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy-950/50 to-navy-950" />
         </div>
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto text-center relative z-10"
+          className="max-w-5xl mx-auto text-center relative z-10"
         >
-          <span className="inline-block px-4 py-1 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-500 text-xs font-bold tracking-widest uppercase mb-6">Legal</span>
-          <h1 className="font-sans font-black text-5xl sm:text-7xl mb-8 leading-tight text-white">
-            Terms & <span className="text-gradient-gold">Conditions</span>
+          <h1 className="font-sans font-black text-6xl sm:text-8xl mb-4 tracking-tighter text-white uppercase">
+            TERMS<span className="text-gold-500"></span>
           </h1>
+          <p className="text-gold-500 font-bold uppercase tracking-[0.4em] text-sm">Agreement & Service Conditions</p>
         </motion.div>
       </section>
 
-      <section className="pt-32 pb-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-[-8rem]">
-        <div className="space-y-12">
-          {sections.map((section, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.05 }}
-              className="flex gap-6 p-8 rounded-3xl bg-navy-50 dark:bg-navy-900 border border-navy-100 dark:border-navy-800"
-            >
-              <div className="w-12 h-12 rounded-2xl bg-gold-500/10 text-gold-500 flex items-center justify-center shrink-0">
-                <section.icon className="w-6 h-6" />
-              </div>
-              <div>
-                <h3 className="text-xl font-black text-navy-900 dark:text-white mb-3">{section.title}</h3>
-                <p className="text-navy-600 dark:text-navy-300 leading-relaxed">{section.content}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+      {/* Document Container */}
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-[-6rem] relative z-20">
+        <div className="bg-white dark:bg-navy-900 rounded-[2rem] shadow-2xl border border-navy-100 dark:border-navy-800 overflow-hidden">
+          {/* Document Header */}
+          <div className="p-12 border-b border-navy-50 dark:border-navy-800 bg-navy-50/50 dark:bg-navy-950/50 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+            <div>
+              <div className="text-navy-400 dark:text-navy-500 text-xs font-bold uppercase tracking-widest mb-2">Legal Agreement</div>
+              <h2 className="text-2xl font-black text-navy-900 dark:text-white uppercase tracking-tight">Raje's Solutions</h2>
+            </div>
+            <div className="text-right">
+              <div className="text-navy-400 dark:text-navy-500 text-xs font-bold uppercase tracking-widest mb-2">Last Modified</div>
+              <div className="text-gold-600 dark:text-gold-500 font-black">July 04, 2026</div>
+            </div>
+          </div>
 
-        <div className="mt-16 p-8 rounded-3xl bg-navy-900 text-white text-center">
-          <p className="text-navy-300 text-sm">
-            Effective Date: July 4, 2026. These Terms & Conditions were last updated on the date above.
-          </p>
+          {/* Document Content */}
+          <div className="p-12 md:p-20">
+            <div className="prose prose-lg prose-navy dark:prose-invert max-w-none">
+              <p className="text-xl text-navy-600 dark:text-navy-300 font-medium leading-relaxed mb-16 border-l-4 border-gold-500 pl-8">
+                By accessing or utilizing the enterprise software and database administration services provided by Raje's Solutions, you explicitly agree to be bound by the following terms and conditions.
+              </p>
+
+              <div className="space-y-20">
+                {sections.map((section, i) => (
+                  <motion.div 
+                    key={i}
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    className="group"
+                  >
+                    <div className="flex items-baseline gap-6 mb-6">
+                      <span className="text-5xl font-black text-navy-100 dark:text-navy-800 group-hover:text-gold-500/20 transition-colors duration-500">
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                      <h3 className="text-2xl font-black text-navy-900 dark:text-white tracking-tight uppercase group-hover:text-gold-500 transition-colors">
+                        {section.title}
+                      </h3>
+                    </div>
+                    <div className="pl-16 border-l-2 border-navy-50 dark:border-navy-800 group-hover:border-gold-500/30 transition-colors py-2">
+                       <p className="text-navy-600 dark:text-navy-300 leading-relaxed text-lg font-medium">
+                         {section.content}
+                       </p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Document Footer */}
+            <div className="mt-32 pt-16 border-t border-navy-100 dark:border-navy-800">
+               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-sm text-navy-500 dark:text-navy-400">
+                  <div>
+                    <h4 className="font-black text-navy-900 dark:text-white uppercase tracking-widest mb-4">Governing Authority</h4>
+                    <p className="leading-relaxed">
+                      This agreement is interpreted in accordance with the laws of India. Any litigation arising from these terms shall be conducted within the exclusive jurisdiction of the state courts.
+                    </p>
+                  </div>
+                  <div className="flex flex-col justify-end items-end space-y-4">
+                     <div className="text-right">
+                        <div className="font-black text-navy-900 dark:text-white uppercase tracking-widest mb-1 italic">Authorized Documentation</div>
+                        <div className="text-[10px] text-navy-400">Ref ID: RS-LEG-2026-001</div>
+                     </div>
+                     <div className="w-48 h-12 bg-navy-50 dark:bg-navy-950 border border-navy-100 dark:border-navy-800 rounded flex items-center justify-center grayscale opacity-50">
+                        <span className="font-serif italic text-navy-300">Raje's Solutions</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>

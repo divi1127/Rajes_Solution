@@ -55,18 +55,23 @@ export default function Navbar() {
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'py-3 bg-navy-900/90 dark:bg-navy-950/90 backdrop-blur-md shadow-lg border-b border-navy-100/50 dark:border-navy-900/40' 
-        : 'py-5 bg-transparent'
+        ? 'py-4 bg-navy-900/90 dark:bg-navy-950/90 backdrop-blur-md shadow-lg border-b border-navy-100/50 dark:border-navy-900/40' 
+        : 'py-6 bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <Link to="/" className="flex items-center gap-2 group">
-              <img src="/logo1.png" alt="Raje's Solutions" className="w-28 h-28 object-contain" />
-              <span className="font-sans font-bold text-xl tracking-tight text-white/90 dark:text-white transition-colors">
-                RAJE'S <span className="text-gold-500 group-hover:text-gold-400 transition-colors">SOLUTIONS</span>
-              </span>
+            <Link to="/" className="flex items-center gap-3 group">
+              <img src="/logo2.png" alt="Raje's Solutions" className="w-24 h-24 object-contain drop-shadow-xl group-hover:scale-105 transition-transform duration-300" />
+              <div className="flex flex-col">
+                <span className="font-sans font-black text-xl tracking-tighter text-white leading-none">
+                  RAJE'S
+                </span>
+                <span className="font-sans font-bold text-[10px] tracking-[0.2em] text-gold-500 uppercase mt-1 leading-none">
+                  SOLUTIONS
+                </span>
+              </div>
             </Link>
           </div>
 

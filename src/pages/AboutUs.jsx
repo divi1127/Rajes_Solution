@@ -121,7 +121,7 @@ export default function AboutUs() {
             <h3 className="text-3xl sm:text-5xl font-black text-navy-900 dark:text-white mb-8 leading-tight">Technology Should Simplify Business</h3>
             <div className="space-y-6 text-navy-600 dark:text-navy-300 text-lg leading-relaxed">
               <p>
-                Hello, I'm <strong>Saravanan Soundararajan</strong>, Founder & Chief Executive Officer of <strong>StockPilot</strong>.
+                Hello, I'm <strong>Saravanan Soundararajan</strong>, Founder & Chief Executive Officer of <strong>RAJE'S SOLUTIONS</strong>.
               </p>
               <p>
                 My career began in enterprise database engineering, where I designed, optimized, and managed large-scale database platforms powering business-critical applications. As technology evolved, so did my expertise—expanding into enterprise architecture, cloud computing, automation, artificial intelligence, DevOps, and digital transformation.
@@ -208,52 +208,99 @@ export default function AboutUs() {
       </section>
 
       {/* Executive Profile */}
-      <section className="py-24 bg-navy-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10" />
+      <section className="py-32 bg-[#020617] text-white relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gold-500/5 rounded-full blur-[150px] animate-pulse" />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-600/5 rounded-full blur-[150px]" />
+        
         <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <span className="inline-block px-4 py-1 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-500 text-xs font-bold tracking-widest uppercase mb-4">Executive Profile</span>
-            <h2 className="text-4xl sm:text-6xl font-black mb-4">Saravanan Soundararajan</h2>
-            <p className="text-lg text-gold-400 font-semibold">Enterprise Software Architect &bull; Product Innovator &bull; Technology Entrepreneur</p>
+          <div className="flex flex-col lg:flex-row items-end justify-between gap-8 mb-20">
+            <div className="max-w-2xl">
+              <motion.span 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-500 text-xs font-black tracking-[0.2em] uppercase mb-6"
+              >
+                <div className="w-1.5 h-1.5 rounded-full bg-gold-500 animate-ping" />
+                Executive Profile
+              </motion.span>
+              <motion.h2 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                className="text-5xl sm:text-7xl font-sans font-black mb-6 tracking-tight leading-none"
+              >
+                Saravanan <span className="text-gradient-gold">Soundararajan</span>
+              </motion.h2>
+              <motion.p 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                className="text-xl text-navy-300 font-medium tracking-tight"
+              >
+                Enterprise Software Architect <span className="text-gold-500/50 mx-2">•</span> 
+                Product Innovator <span className="text-gold-500/50 mx-2">•</span> 
+                Technology Entrepreneur
+              </motion.p>
+            </div>
           </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-            <div className="space-y-4">
-              <h3 className="text-sm font-bold text-gold-500 uppercase tracking-widest mb-6">Professional Highlights</h3>
-              {highlights.map((item, i) => (
-                <div key={i} className="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-gold-500/10 hover:border-gold-500/30 transition-all group">
-                  <div className="w-8 h-8 rounded-full bg-gold-500/20 flex items-center justify-center shrink-0 group-hover:bg-gold-500 group-hover:text-navy-950 transition-all">
-                    <CheckCircle2 className="w-4 h-4" />
-                  </div>
-                  <span className="text-sm font-medium text-navy-200 group-hover:text-white transition-colors">{item}</span>
+            
+          {/* Grouped Stats Section */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-20"
+          >
+            {[
+              { label: "Years Experience", value: "26+" },
+              { label: "ERP Platforms", value: "2" },
+              { label: "Uptime SLA", value: "99.9%" },
+              { label: "Global Support", value: "24/7" }
+            ].map((stat, i) => (
+              <div key={i} className="relative group overflow-hidden p-8 rounded-3xl bg-white/[0.03] border border-white/10 hover:border-gold-500/30 transition-all">
+                <div className="absolute inset-0 bg-gradient-to-br from-gold-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="relative z-10">
+                  <div className="text-4xl font-black text-gold-500 mb-2">{stat.value}</div>
+                  <div className="text-[11px] text-navy-400 uppercase tracking-[0.2em] font-bold">{stat.label}</div>
                 </div>
+              </div>
+            ))}
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            {/* Highlights Grid */}
+            <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+              {highlights.map((item, i) => (
+                <motion.div 
+                  key={i}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.05 }}
+                  className="flex items-start gap-4 p-5 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.05] hover:border-gold-500/30 transition-all group"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-gold-500/10 flex items-center justify-center shrink-0 group-hover:bg-gold-500 group-hover:text-navy-950 transition-all duration-300">
+                    <CheckCircle2 className="w-5 h-5" />
+                  </div>
+                  <span className="text-sm font-medium text-navy-200 group-hover:text-white transition-colors pt-2 leading-relaxed">{item}</span>
+                </motion.div>
               ))}
             </div>
 
-            <div className="flex flex-col justify-center">
-              <div className="grid grid-cols-2 gap-6 mb-8">
-                <div className="p-8 rounded-3xl bg-gradient-to-br from-gold-500/20 to-gold-500/5 border border-gold-500/20 text-center">
-                  <div className="text-5xl font-black text-gold-500 mb-2">26+</div>
-                  <div className="text-xs text-navy-300 uppercase tracking-widest font-bold">Years of Leadership</div>
+            {/* Sidebar / Technical Credentials */}
+            <div className="lg:col-span-4 lg:sticky lg:top-8 h-fit">
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gold-500/20 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="relative p-10 rounded-[2.5rem] bg-gradient-to-br from-navy-900 to-navy-950 border border-navy-800 overflow-hidden">
+                  <div className="relative z-10 space-y-6">
+                    <h4 className="text-xs font-bold text-gold-500 uppercase tracking-widest px-1">Technical Focus</h4>
+                    <div className="space-y-4">
+                       <div className="p-4 rounded-xl bg-white/5 border border-white/10">
+                          <p className="text-sm text-navy-200 leading-relaxed font-medium">Expertise in high-availability database architecture, cloud-native modernization, and intelligent business process automation.</p>
+                       </div>
+                       <div className="p-4 rounded-xl bg-white/5 border border-white/10">
+                          <p className="text-xs text-navy-400 font-bold uppercase tracking-widest leading-relaxed">Microsoft SQL Server • PostgreSQL • SAP HANA • Oracle • DB2</p>
+                       </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="p-8 rounded-3xl bg-gradient-to-br from-gold-500/20 to-gold-500/5 border border-gold-500/20 text-center">
-                  <div className="text-5xl font-black text-gold-500 mb-2">2</div>
-                  <div className="text-xs text-navy-300 uppercase tracking-widest font-bold">ERP Products Founded</div>
-                </div>
-                <div className="p-8 rounded-3xl bg-gradient-to-br from-gold-500/20 to-gold-500/5 border border-gold-500/20 text-center">
-                  <div className="text-5xl font-black text-gold-500 mb-2">99.9%</div>
-                  <div className="text-xs text-navy-300 uppercase tracking-widest font-bold">System Reliability</div>
-                </div>
-                <div className="p-8 rounded-3xl bg-gradient-to-br from-gold-500/20 to-gold-500/5 border border-gold-500/20 text-center">
-                  <div className="text-5xl font-black text-gold-500 mb-2">24/7</div>
-                  <div className="text-xs text-navy-300 uppercase tracking-widest font-bold">Managed Support</div>
-                </div>
-              </div>
-              
-              <div className="p-6 rounded-3xl bg-white/5 border border-white/10 text-center">
-                <p className="text-navy-300 text-sm italic">
-                  "Passionate about building enterprise software that combines technical excellence with outstanding user experience."
-                </p>
               </div>
             </div>
           </div>
