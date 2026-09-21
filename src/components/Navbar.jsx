@@ -63,7 +63,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link to="/" className="flex items-center gap-3 group">
-              <img src="/logo2.png" alt="Raje's Solutions" className="w-24 h-24 object-contain drop-shadow-xl group-hover:scale-105 transition-transform duration-300" />
+              <img src="/logo.png" alt="Raje's Solutions" className="w-20 h-40 object-contain drop-shadow-xl group-hover:scale-105 transition-transform duration-300" />
               <div className="flex flex-col">
                 <span className="font-sans font-black text-xl tracking-tighter text-white leading-none">
                   RAJE'S

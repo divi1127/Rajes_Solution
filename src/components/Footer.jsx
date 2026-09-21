@@ -63,7 +63,7 @@ export default function Footer() {
           {/* Brand Info */}
           <div className="lg:col-span-5">
             <Link to="/" className="flex items-center gap-4 mb-8 group -mt-6">
-              <img src="/logo2.png" alt="Raje's Solutions" className="w-24 h-24 object-contain" />
+              <img src="/logo.png" alt="Raje's Solutions" className="w-24 h-24 object-contain" />
               <span className="font-sans font-black text-2xl tracking-tighter text-white">
                 RAJE'S <span className="text-gold-500">SOLUTIONS</span>
               </span>
@@ -118,9 +118,9 @@ export default function Footer() {
                 <span className="font-semibold uppercase tracking-wider text-[10px]">Global Support</span>
               </div>
               <div className="flex flex-row gap-6 items-center text-[11px] font-medium text-navy-400">
-                <a href="tel:+919884498549" className="hover:text-gold-500 transition-colors flex items-center gap-1.5 whitespace-nowrap">
+                <a href="tel:04322222646" className="hover:text-gold-500 transition-colors flex items-center gap-1.5 whitespace-nowrap">
                   <Phone className="w-3 h-3 text-gold-500/50" />
-                  +91 98844 98549
+                  04322 222646
                 </a>
                 <a href="https://wa.me/918825709105" className="hover:text-gold-500 transition-colors flex items-center gap-1.5 whitespace-nowrap">
                   <MessageSquare className="w-3 h-3 text-gold-500/50" />

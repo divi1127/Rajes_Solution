@@ -116,7 +116,7 @@ const sections = [
   {
     title: "Contact Information",
     icon: Mail,
-    content: "Email: saravanan.soundararajan@rajessolutions.com. Phone: +91 98844 98549. Address: Shirdi Sai Baba Temple, TS NO 1045 North Fourth Street, Pudukkottai - 622001, Tamilnadu, India."
+    content: "Email: saravanan.soundararajan@rajessolutions.com. Phone: 04322 222646. Address: Shirdi Sai Baba Temple, TS NO 1045 North Fourth Street, Pudukkottai - 622001, Tamilnadu, India."
   }
 ];
 

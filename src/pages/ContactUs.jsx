@@ -87,7 +87,7 @@ export default function ContactUs() {
                   </div>
                   <div>
                     <h4 className="font-bold text-navy-500 uppercase tracking-widest text-[10px] mb-2">Call Us</h4>
-                    <a href="tel:+919884498549" className="block text-navy-800 dark:text-navy-200 font-bold hover:text-gold-500 transition-colors">+91 98844 98549</a>
+                    <a href="tel:04322222646" className="block text-navy-800 dark:text-navy-200 font-bold hover:text-gold-500 transition-colors">04322 222646</a>
                     <a href="tel:+918825709105" className="block text-navy-800 dark:text-navy-200 font-bold hover:text-gold-500 transition-colors">+91 88257 09105</a>
                   </div>
                 </div>
@@ -186,7 +186,7 @@ export default function ContactUs() {
                         value={formData.phone}
                         onChange={e => setFormData(p => ({...p, phone: e.target.value}))}
                         className="w-full px-6 py-4 rounded-2xl bg-navy-50 dark:bg-navy-950 border border-navy-100 dark:border-navy-800 focus:border-gold-500 focus:outline-none transition-all font-bold text-navy-900 dark:text-white"
-                        placeholder="+91 98844 98549"
+                        placeholder="04322 222646"
                       />
                     </div>
                     <div className="space-y-2">
